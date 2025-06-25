@@ -1,0 +1,277 @@
+{
+    "name": "Bridge75",
+    "vendorId":  "0x0C45",
+    "productId": "0xFEFE",
+    "keycodes": ["qmk_lighting"],
+    "menus": [
+      {
+        "label": "Lighting",
+        "content": [
+          {
+            "label": "Backlight",
+            "content": [
+              {
+                "label": "Brightness",
+                "type": "range",
+                "options": [0, 255],
+                "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
+              },
+              {
+                "label": "Effect",
+                "type": "dropdown",
+                "content": ["id_qmk_rgb_matrix_effect", 3, 2],
+                "options": [
+                    ["All Off", 0],
+                    ["SOLID_COLOR", 1],
+                    ["BREATHING", 2],
+                    ["CYCLE_ALL", 3],
+                    ["CYCLE_LEFT_RIGHT", 4],
+                    ["CYCLE_UP_DOWN", 5],
+                    ["RAINBOW_MOVING_CHEVRON", 6],
+                    ["CYCLE_OUT_IN", 7],
+                    ["CYCLE_OUT_IN_DUAL", 8],
+                    ["CYCLE_PINWHEEL", 9],
+                    ["CYCKE_SPIRAL", 10],
+                    ["DUAL_BEACON", 11],
+                    ["RAINBOW_BEACON", 12],
+                    ["RAINDROPS", 13],
+                    ["TYPING_HEATMAP", 14],
+                    ["SOLID_REACTIVE_SIMPLE", 15],
+                    ["SOLID_REACTIVE", 16],
+                    ["SOLID_REACTIVE_NEXUS", 17],
+                    ["MATRIX_MULTISPLASH", 18],
+                    ["Direct", 19]
+                  ]
+              },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} > 1 && {id_qmk_rgb_matrix_effect} != 19",
+              "label": "Effect Speed",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 19 && ( {id_qmk_rgb_matrix_effect} < 4 || {id_qmk_rgb_matrix_effect} == 18 || ({id_qmk_rgb_matrix_effect} > 17 && {id_qmk_rgb_matrix_effect} != 21) ) ",
+              "label": "Color",
+              "type": "color",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} == 19",
+              "label": "Color Palette",
+               "type": "color-palette",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            }
+            ]
+          }
+        ]
+      }
+    ],
+    "matrix": {"rows": 6, "cols": 15},
+    "customKeycodes": [
+      {"name": "KC_USB","title": "USB","shortName": "KC_USB"},
+      {"name": "KC_BT1","title": "BT 1","shortName": "KC_BT1"},
+      {"name": "KC_BT2","title": "BT 2","shortName": "KC_BT2"},
+      {"name": "KC_BT3","title": "BT 3","shortName": "KC_BT3"},
+      {"name": "KC_BT4","title": "BT 4","shortName": "KC_BT4"},
+      {"name": "KC_BT5","title": "BT 5","shortName": "KC_BT5"},
+      {"name": "KC_2G4","title": "2.4G","shortName": "KC_2G4"}
+    ],
+    "layouts": {
+        "keymap":
+        [
+            [
+              {
+                "c": "#777777"
+              },
+              "0,0\nl0",
+              {
+                "x": 0.5,
+                "c": "#cccccc"
+              },
+              "0,1\nl1",
+              "0,2\nl2",
+              "0,3\nl3",
+              "0,4\nl4",
+              {
+                "x": 0.5
+              },
+              "0,5\nl5",
+              "0,6\nl6",
+              "0,7\nl7",
+              "0,8\nl8",
+              {
+                "x": 0.5
+              },
+              "0,9\nl9",
+              "0,10\nl10",
+              "0,11\nl11",
+              "0,12\nl12",
+              {
+                "x": 0.5
+              },
+              "0,14\nl13"
+            ],
+            [
+              {
+                "y": 0.25
+              },
+              "1,0\nl14",
+              "1,1\nl15",
+              "1,2\nl16",
+              "1,3\nl17",
+              "1,4\nl18",
+              "1,5\nl19",
+              "1,6\nl20",
+              "1,7\nl21",
+              "1,8\nl22",
+              "1,9\nl23",
+              "1,10\nl24",
+              "1,11\nl25",
+              "1,12\nl26",
+              {
+                "c": "#aaaaaa",
+                "w": 2
+              },
+              "1,13\nl27",
+              {
+                "c": "#cccccc"
+              },
+              "1,14\nl28"
+            ],
+            [
+              {
+                "c": "#aaaaaa",
+                "w": 1.5
+              },
+              "2,0\nl29",
+              {
+                "c": "#cccccc"
+              },
+              "2,1\nl30",
+              "2,2\nl31",
+              "2,3\nl32",
+              "2,4\nl33",
+              "2,5\nl34",
+              "2,6\nl35",
+              "2,7\nl36",
+              "2,8\nl37",
+              "2,9\nl38",
+              "2,10\nl39",
+              "2,11\nl40",
+              "2,12\nl41",
+              {
+                "w": 1.5
+              },
+              "2,13\nl42",
+              "2,14\nl43"
+            ],
+            [
+              {
+                "c": "#aaaaaa",
+                "w": 1.75
+              },
+              "3,0\nl44",
+              {
+                "c": "#cccccc"
+              },
+              "3,1\nl45",
+              {
+                "x": 1
+              },
+              "3,3\nl46",
+              "3,4\nl47",
+              "3,5\nl48",
+              "3,6\nl49",
+              "3,7\nl50",
+              "3,8\nl51",
+              "3,9\nl52",
+              "3,10\nl53",
+              "3,11\nl54",
+              {
+                "c": "#777777",
+                "w": 2.25
+              },
+              "3,13\nl55",
+              {
+                "c": "#cccccc"
+              },
+              "3,14\nl56"
+            ],
+            [
+              {
+                "c": "#aaaaaa",
+                "w": 2.25
+              },
+              "4,0\nl57",
+              {
+                "c": "#cccccc"
+              },
+              "4,1\nl58",
+              "4,2\nl59",
+              "4,3\nl60",
+              "4,4\nl61",
+              "4,5\nl62",
+              "4,6\nl63",
+              "4,7\nl64",
+              "4,8\nl65",
+              "4,9\nl66",
+              "4,10\nl67",
+              {
+                "c": "#aaaaaa",
+                "w": 1.75
+              },
+              "4,11\nl68",
+              {
+                "c": "#cccccc"
+              },
+              "4,13\nl69",
+              "4,14\nl70"
+            ],
+            [
+              {
+                "c": "#aaaaaa",
+                "w": 1.25
+              },
+              "5,0\nl71",
+              {
+                "w": 1.25
+              },
+              "5,1\nl72",
+              {
+                "w": 1.25
+              },
+              "5,2\nl73",
+              {
+                "c": "#cccccc",
+                "w": 6.25
+              },
+              "5,5\nl74",
+              {
+                "c": "#aaaaaa",
+                "w": 1.5
+              },
+              "5,9\nl75",
+              {
+                "w": 1.5
+              },
+              "5,10\nl76",
+              {
+                "c": "#cccccc"
+              },
+              "5,12\nl77",
+              "5,13\nl78",
+              "5,14\nl79"
+            ],
+            [
+              {
+                "rx": 9.6,
+                "ry": 4.3,
+                "y": -1.0499999999999998,
+                "x": -6.85
+              },
+              "3,2\nl80"
+            ]
+          ]
+    }
+}
