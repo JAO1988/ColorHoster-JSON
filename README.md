@@ -39,8 +39,8 @@ Or use `git` to clone the repository:\
 
 Inside you’ll find two top-level folders:
 
-**direct-mode** — custom ColorHoster animation files\
-**keyboard** — vendor-specific JSONs
+**direct-mode** — custom Color Hoster animation files\
+**keyboard** — vendor-specific VIA JSON files
 
 
 ### Building your Color Hoster QMK Firmware
