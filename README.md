@@ -203,8 +203,8 @@ Under the "layout" → "keymap" section, each LED is declared as:
 ## Troubleshooting
 If your VIA JSON fails to load or LEDs appear in the wrong spots:
 - **Validate JSON syntax**  
-  • Run a linter (e.g. `jq . via_keyboard.json`) to catch missing commas, unquoted keys, or stray braces.  
-  • Online tool https://jsonlint.com can highlight subtle formatting errors.
+  • Inspect your modified VIA JSON file ensure missing commas, unquoted keys, or stray braces are corrected.
+  • You can use an online JSON inspect tool like ttps://jsonlint.com to highlight subtle formatting errors.
 - **Check `"id_qmk_rgb_matrix_effect"` indices**  
   • Ensure the `"Direct"` effect ID matches your firmware’s `RGB_MATRIX_EFFECT_COUNT` offset—off-by-one here prevents VIA from recognizing the dropdown.  
   • All content arrays (`["id_qmk_rgb_matrix_color", 3, 4]`, etc.) must reference valid VIA channel IDs and lengths.  
