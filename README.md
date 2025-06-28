@@ -53,12 +53,12 @@ Create a new keymap folder (-km) in your QMK tree, for example:\
 `qmk_firmware/keyboards/keychron/k2_he/ansi/keymaps/viach`
 
 2. Copy both files from direct-mode/ into your keyboard's keymap folder:\
-`rgb_matrix_user.inc` & `animations/direct.h` (Folder structure must be included)
+`rgb_matrix_user.inc` & `animations/direct.h` (Folder structure must be included)\
 ![image](https://github.com/user-attachments/assets/d31ca1b7-bf4a-43f1-97a6-f2c7bf5393cc)
 
 4. Enable Custom Animations:\
 Open your `rules.mk` within the newly created keymap folder and add:\
-`RGB_MATRIX_CUSTOM_USER = yes` to the bottom of your `rules.mk`.
+`RGB_MATRIX_CUSTOM_USER = yes` to the bottom of your `rules.mk`.\
 ![image](https://github.com/user-attachments/assets/676301d1-82f3-42e9-aa4e-844befa1ec56)\
 Save and close the file.
 
