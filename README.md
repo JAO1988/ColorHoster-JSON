@@ -47,8 +47,8 @@ Inside you’ll find two top-level folders:
 
 
 ### Building your ColorHoster QMK Firmware
-1. Patch Your QMK Keymap:\
-Locate your keyboard under `keyboard/`.
+1. Patch your QMK Keymap:\
+Locate your keyboard under the `keyboards/` folder within the QMK project files.
 Create a new keymap folder (km) in your QMK tree, for example:\
 `qmk_firmware/keyboards/keychron/k2_he/ansi/keymaps/viach`
 
