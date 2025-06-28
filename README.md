@@ -199,3 +199,4 @@ Under the "layout" → "keymap" section, each LED is declared as:
 ```
 - The string "row,col\nl*" binds LED index * at grid position (row,col).
 - Begin at "0,0\nl0" and increment the LED index for each matrix position.
+$${\color{green}nl14}$$
