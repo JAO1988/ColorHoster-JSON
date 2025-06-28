@@ -218,3 +218,6 @@ If your VIA JSON fails to load or LEDs appear in the wrong spots:
 - **Still unsure?**\
   • Reach out to JAO1988 (Siphoned Anomaly) within the `OpenRGB` Discord Channel.\
   • Support questsions or concerns for QMK-related issues should be relayed to the `qmk-firmware-hacking` channel.
+
+## Contributing
+- Add new vendor JSONs under keyboard/ with a `Readme.md` file which includes a QMK Repsoitory Github URL and basic setup commands to pull the repository.
