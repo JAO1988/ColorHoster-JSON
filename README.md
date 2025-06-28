@@ -115,3 +115,5 @@ With your favorite Command-Line Application of choice, begin compiling your new 
 **Example:** ```qmk setup --clean -kb keychron/k2_he/ansi -km viach```
 
 This will compile and flash your QMK firmware with ColorHoster direct-mode support.
+## Building a new ColorHoster VIA JSON File
+
