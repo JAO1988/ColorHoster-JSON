@@ -59,7 +59,7 @@ Create a new keymap folder (-km) in your QMK tree, for example:\
 4. Enable Custom Animations:\
 Open your `rules.mk` within the newly created keymap folder and add:\
 `RGB_MATRIX_CUSTOM_USER = yes` to the bottom of your `rules.mk`.
-![image](https://github.com/user-attachments/assets/676301d1-82f3-42e9-aa4e-844befa1ec56)
+![image](https://github.com/user-attachments/assets/676301d1-82f3-42e9-aa4e-844befa1ec56)\
 Save and close the file.
 
 5. Update the keyboard `keymap.c` file:\
