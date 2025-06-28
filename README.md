@@ -113,8 +113,7 @@ With your favorite Command-Line Application of choice, begin compiling your new 
 
 This will compile your QMK firmware with ColorHoster direct-mode support. You can use the `QMK Toolbox` GUI flashing tool or `qmk flash` command in substition of `qmk compile` to compile and flash your keyboard from the CLI.
 ## VIA JSON Configuration
-To expose your Direct-mode animations in VIA, update the JSON for your keyboard:
-
+To expose your Direct-mode animations in VIA, update the JSON for your keyboard:\
 1. Add the “Direct” Effect
 Under the "Effects" array, append a new entry in the options:
 ```
