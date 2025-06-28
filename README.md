@@ -207,7 +207,7 @@ If your VIA JSON fails to load or LEDs appear in the wrong spots:
   • You can use an online JSON inspect tool like *JSON Lint* https://jsonlint.com to highlight subtle formatting errors.
 - **Check `"id_qmk_rgb_matrix_effect"` indices**  
   • Ensure the `"Direct"` effect ID matches your firmware’s `RGB_MATRIX_EFFECT_COUNT` offset—off-by-one here prevents VIA from recognizing the dropdown.  
-  • All content arrays (`["id_qmk_rgb_matrix_color", 3, 4]`, etc.) must reference valid VIA channel IDs and lengths.\
+  • All content arrays (`["id_qmk_rgb_matrix_color", 3, 4]`, etc.) must reference valid VIA channel IDs and lengths.
 - **Still unsure?**\
   • Reach out to JAO1988 (Siphoned Anomaly) within the `OpenRGB` Discord Channel.\
   • Support questsions or concerns for QMK-related questions should be relayed to the `qmk-firmware-hacking` channel.
