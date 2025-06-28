@@ -31,9 +31,9 @@ This repo stores **pre-built VIA JSON files** for various keyboard vendors. Each
 2. Basic QMK instructions for pulling down firmware
 ---
 
-### Getting Started ###
+## Getting Started
 
-## Cloning the ColorHoster-JSON Repo
+### Cloning the ColorHoster-JSON Repo
 You can clone this project by either downloading the zip file:
 ![image](https://github.com/user-attachments/assets/87549ffb-6b6b-4274-8883-cba9a68b7e5e)
 
@@ -46,7 +46,7 @@ Inside you’ll find two top-level folders:
 **keyboard/ — vendor-specific JSONs**
 
 
-## Building your ColorHoster QMK Firmware
+### Building your ColorHoster QMK Firmware
 1. Patch your QMK Keymap:\
 Locate your keyboard under the `/keyboards/` folder within the QMK project files.
 Create a new keymap folder (-km) in your QMK tree, for example:\
@@ -104,7 +104,7 @@ void via_custom_value_command_kb(uint8_t *data, uint8_t length) {
 #endif // VIA_ENABLE
 ```
 You're now ready to compile your added keyboard firwmware with ColorHoster direct mode patched in.
-## Flashing
+### Flashing
 With your favorite Command-Line Application of choice, in the root of your QMK firmware folder run the following:\
 ```qmk setup --clean -kb keychron/k2_he/ansi -km viach```
 
