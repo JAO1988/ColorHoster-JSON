@@ -51,9 +51,9 @@ Create a new keymap folder (km) in your QMK tree, for example:
 `rgb_matrix_user.inc` & `animations/direct.h` (Folder structure must be included)
 
 3. Enable Custom Animations:\
-Open your `rules.mk` within the newly created keymap folder and add:
-`RGB_MATRIX_CUSTOM_USER = yes`
-To the bottom of your `rules.mk`. Save and close the file.
+Open your `rules.mk` within the newly created keymap folder and add:\
+`RGB_MATRIX_CUSTOM_USER = yes`\
+to the bottom of your `rules.mk`. Save and close the file.
 
 4. Update the keyboard `keymap.c` file:\
 At the bottom of your `keymap.c` file, add the following lines for ColorHoster direct mode control:
