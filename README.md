@@ -181,19 +181,19 @@ In the same JSON file, add these under the parameters section:
 Under the "layout" → "keymap" section, each LED is declared as:
 
 ```
-"0,0\nl0",
+"0,0<code style="color : green">\nl0</code>",
 { "x": 0.5, "c": "#cccccc" },
-"0,1\nl1",
-"0,2\nl2",
+"0,1<code style="color : green">\nl1</code>",
+"0,2<code style="color : green">\nl2</code>",
 ...
-"0,14\nl13"
+"0,14<code style="color : green">\nl13</code>"
 ],
 [
   { "y": 0.25 },
-  "1,0\nl14",
-  "1,1\nl15",
+  "1,0<code style="color : green">\nl14</code>",
+  "1,1<code style="color : green">\nl15</code>",
   ...
-  "1,13\nl27",
+  "1,13<code style="color : green">\nl27</code>",
   ...
 ]
 ```
