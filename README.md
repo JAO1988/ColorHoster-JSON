@@ -25,8 +25,7 @@ An OpenRGB-compatible, high-performance SDK server for VIA per-key RGB firmware 
 
 ## Repository Structure
 
-This repo stores **pre-built VIA JSON files** for various keyboard vendors.  
-Each vendor folder contains:
+This repo stores **pre-built VIA JSON files** for various keyboard vendors. Each vendor folder contains:
 
 1. A link to the manufacturer’s QMK firmware GitHub repo  
 2. Basic QMK instructions for pulling down firmware
