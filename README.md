@@ -30,7 +30,7 @@ This repository is used for storing **pre-built VIA JSON files** with Color Host
 
 ## Getting Started
 
-### Cloning the ColorHoster-JSON Repo
+### Cloning the ColorHoster-JSON Repository
 You can clone this project by either downloading the zip file:
 ![image](https://github.com/user-attachments/assets/87549ffb-6b6b-4274-8883-cba9a68b7e5e)
 
