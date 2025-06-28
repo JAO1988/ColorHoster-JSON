@@ -111,7 +111,7 @@ void via_custom_value_command_kb(uint8_t *data, uint8_t length) {
 
 You're now ready to compile your added keyboard firmware with ColorHoster direct mode patched in.
 ## Flashing
-With your favorite Command-Line Application of choice, begin compiling your new keymap for your keyboard: 
-Example: ```qmk setup --clean -kb keychron/k2_he/ansi -km viach```
+With your favorite Command-Line Application of choice, begin compiling your new keymap for your keyboard\
+**Example:** ```qmk setup --clean -kb keychron/k2_he/ansi -km viach```
 
 This will compile and flash your QMK firmware with ColorHoster direct-mode support.
