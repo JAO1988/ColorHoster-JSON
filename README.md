@@ -34,8 +34,7 @@ This repo stores **pre-built VIA JSON files** for various keyboard vendors. Each
 
 ## Getting Started
 
-### 1. Clone the ColorHoster-JSON Repo
-
+### Cloning the ColorHoster-JSON Repo
 `git clone https://github.com/JAO1988/ColorHoster-JSON.git`
 
 Inside you’ll find two top-level folders:
