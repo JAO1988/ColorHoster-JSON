@@ -149,11 +149,11 @@ Under the "Effects" array, append a new entry in the options:
   ]
 }
 ```
-> Note: Replace 19 with your keyboard’s next available effect ID.\
+> Note: Replace 19 with your keyboard’s next available effect ID.
 
-**Example**
+**Example**\
 ![image](https://github.com/user-attachments/assets/420eb98d-4bad-4b85-a945-90cb524fc719)
-
+\
 2. Add Direct-Mode Parameters:
 In the same JSON file, add these under the parameters section:
 ```
