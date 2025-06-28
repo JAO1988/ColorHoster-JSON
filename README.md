@@ -220,4 +220,4 @@ If your VIA JSON fails to load or LEDs appear in the wrong spots:
   • Support questsions or concerns for QMK-related issues should be relayed to the `qmk-firmware-hacking` channel.
 
 ## Contributing
-- Add new vendor JSONs under keyboard/ with a `Readme.md` file which includes a QMK Repsoitory Github URL and basic setup commands to pull the repository.
+- Add new vendor JSONs under the `keyboard` folder with a `Readme.md` file which includes a QMK Repsoitory Github URL and basic setup commands to pull the repository.
