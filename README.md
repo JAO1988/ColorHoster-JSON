@@ -42,20 +42,20 @@ Inside you’ll find two top-level folders:
 **direct-mode/ — custom ColorHoster animation files**
 **keyboard/ — vendor-specific JSONs**
 
-1. Patch Your QMK Keymap
+1. Patch Your QMK Keymap:\
 Locate your keyboard under `keyboard/`.
 Create a new keymap folder (km) in your QMK tree, for example:
 `qmk_firmware/keyboards/keychron/k2_he/ansi/keymaps/viach`
 
-2. Copy both files from direct-mode/ into your keyboard's keymap folder:
+2. Copy both files from direct-mode/ into your keyboard's keymap folder:\
 `rgb_matrix_user.inc` & `animations/direct.h` (Folder structure must be included)
 
-3. Enable Custom Animations:
+3. Enable Custom Animations:\
 Open your `rules.mk` within the newly created keymap folder and add:
 `RGB_MATRIX_CUSTOM_USER = yes`
 To the bottom of your `rules.mk`. Save and close the file.
 
-4. Update the keyboard `keymap.c` file:
+4. Update the keyboard `keymap.c` file:\
 At the bottom of your `keymap.c` file, add the following lines for ColorHoster direct mode control:
 ```
 #uint8_t color_buffer[RGB_MATRIX_LED_COUNT * 2] = {0};
