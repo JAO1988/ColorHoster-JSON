@@ -44,7 +44,7 @@ Inside you’ll find two top-level folders:
 
 1. Patch Your QMK Keymap:\
 Locate your keyboard under `keyboard/`.
-Create a new keymap folder (km) in your QMK tree, for example:
+Create a new keymap folder (km) in your QMK tree, for example:\
 `qmk_firmware/keyboards/keychron/k2_he/ansi/keymaps/viach`
 
 2. Copy both files from direct-mode/ into your keyboard's keymap folder:\
