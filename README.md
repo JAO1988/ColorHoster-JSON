@@ -45,6 +45,8 @@ Inside you’ll find two top-level folders:
 **direct-mode/ — custom ColorHoster animation files**\
 **keyboard/ — vendor-specific JSONs**
 
+
+### Building your ColorHoster QMK Firmware
 1. Patch Your QMK Keymap:\
 Locate your keyboard under `keyboard/`.
 Create a new keymap folder (km) in your QMK tree, for example:\
