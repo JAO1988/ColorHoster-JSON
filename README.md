@@ -217,4 +217,4 @@ If your VIA JSON fails to load or LEDs appear in the wrong spots:
   • All content arrays (`["id_qmk_rgb_matrix_color", 3, 4]`, etc.) must reference valid VIA channel IDs and lengths.
 - **Still unsure?**\
   • Reach out to JAO1988 (Siphoned Anomaly) within the `OpenRGB` Discord Channel.\
-  • Support questsions or concerns for QMK-related questions should be relayed to the `qmk-firmware-hacking` channel.
+  • Support questsions or concerns for QMK-related issues should be relayed to the `qmk-firmware-hacking` channel.
