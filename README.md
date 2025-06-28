@@ -115,4 +115,87 @@ With your favorite Command-Line Application of choice, begin compiling your new 
 **Example:** ```qmk compile --clean -kb keychron/k2_he/ansi -km viach```
 
 This will compile your QMK firmware with ColorHoster direct-mode support. You can use the `QMK Toolbox` GUI flashing tool or `qmk flash` command in substition of `qmk compile` to compile and flash your keyboard from the CLI.
-## Building a new ColorHoster VIA JSON File
+## VIA JSON Configuration
+To expose your Direct-mode animations in VIA, update the JSON for your keyboard:
+
+1. Add the “Direct” Effect
+Under the "Effects" array, append a new entry in the options:
+```
+{
+  "label": "Effect",
+  "type": "dropdown",
+  "content": ["id_qmk_rgb_matrix_effect", 3, 2],
+  "options": [
+    ["All Off", 0],
+    ["SOLID_COLOR", 1],
+    ["BREATHING", 2],
+    ["CYCLE_ALL", 3],
+    ["CYCLE_LEFT_RIGHT", 4],
+    ["CYCLE_UP_DOWN", 5],
+    ["RAINBOW_MOVING_CHEVRON", 6],
+    ["CYCLE_OUT_IN", 7],
+    ["CYCLE_OUT_IN_DUAL", 8],
+    ["CYCLE_PINWHEEL", 9],
+    ["CYCKE_SPIRAL", 10],
+    ["DUAL_BEACON", 11],
+    ["RAINBOW_BEACON", 12],
+    ["RAINDROPS", 13],
+    ["TYPING_HEATMAP", 14],
+    ["SOLID_REACTIVE_SIMPLE", 15],
+    ["SOLID_REACTIVE", 16],
+    ["SOLID_REACTIVE_NEXUS", 17],
+    ["MATRIX_MULTISPLASH", 18],
+    ["Direct", 19]    // ← your Direct Mode ID Number (may vary)
+  ]
+}
+```
+> Note: Replace 19 with your keyboard’s next available effect ID.
+
+2. Add Direct-Mode Parameters:
+In the same JSON file, add these under the parameters section:
+```
+// Effect Speed (for all except Off & Direct)
+{
+  "showIf": "{id_qmk_rgb_matrix_effect} > 1 && {id_qmk_rgb_matrix_effect} != 19",
+  "label": "Effect Speed",
+  "type": "range",
+  "options": [0, 255],
+  "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+},
+// Color Picker (for select effects)
+{
+  "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 19 && ( {id_qmk_rgb_matrix_effect} < 4 || {id_qmk_rgb_matrix_effect} == 18 || ({id_qmk_rgb_matrix_effect} > 17 && {id_qmk_rgb_matrix_effect} != 21) )",
+  "label": "Color",
+  "type": "color",
+  "content": ["id_qmk_rgb_matrix_color", 3, 4]
+},
+// Direct-Mode Palette Selector
+{
+  "showIf": "{id_qmk_rgb_matrix_effect} == 19",
+  "label": "Color Palette",
+  "type": "color-palette",
+  "content": ["id_qmk_rgb_matrix_color", 3, 4]
+}
+```
+3. Declare LEDs in the Layout
+Under the "layout" → "keymap" section, each LED is declared as:
+
+```
+"0,0\nl0",
+{ "x": 0.5, "c": "#cccccc" },
+"0,1\nl1",
+"0,2\nl2",
+...
+"0,14\nl13"
+],
+[
+  { "y": 0.25 },
+  "1,0\nl14",
+  "1,1\nl15",
+  ...
+  "1,13\nl27",
+  ...
+]
+```
+- The string "row,col\nl*" binds LED index * at grid position (row,col).
+- Begin at "0,0\nl0" and increment the LED index for each matrix position.
