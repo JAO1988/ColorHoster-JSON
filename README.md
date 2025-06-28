@@ -199,3 +199,12 @@ Under the "layout" → "keymap" section, each LED is declared as:
 ```
 - The string "row,col\nl*" binds LED index * at grid position (row,col).
 - Begin at "0,0\nl0" and increment the LED index for each matrix position.
+
+## Troubleshooting
+If your VIA JSON fails to load or LEDs appear in the wrong spots:
+- **Validate JSON syntax**  
+  • Run a linter (e.g. `jq . via_keyboard.json`) to catch missing commas, unquoted keys, or stray braces.  
+  • Online tool https://jsonlint.com can highlight subtle formatting errors.
+- **Check `"id_qmk_rgb_matrix_effect"` indices**  
+  • Ensure the `"Direct"` effect ID matches your firmware’s `RGB_MATRIX_EFFECT_COUNT` offset—off-by-one here prevents VIA from recognizing the dropdown.  
+  • All content arrays (`["id_qmk_rgb_matrix_color", 3, 4]`, etc.) must reference valid VIA channel IDs and lengths.  
