@@ -154,7 +154,6 @@ Under the "Effects" array, append a new entry in the options:
 **Example:**\
 ![image](https://github.com/user-attachments/assets/420eb98d-4bad-4b85-a945-90cb524fc719)
 \
-\
 2. Add Direct-Mode Parameters:
 In the same JSON file, add these under the parameters section:
 ```
@@ -181,6 +180,9 @@ In the same JSON file, add these under the parameters section:
   "content": ["id_qmk_rgb_matrix_color", 3, 4]
 }
 ```
+**Example:**\
+![image](https://github.com/user-attachments/assets/96d4e6af-c670-4100-80ba-9a751cff6c4d)
+\
 3. Declare LEDs in the Layout
 Under the "layout" → "keymap" section, each LED is declared as:
 
@@ -203,7 +205,9 @@ Under the "layout" → "keymap" section, each LED is declared as:
 ```
 - The string "row,col\nl*" binds LED index * at grid position (row,col).
 - Begin at "0,0\nl0" and increment the LED index for each matrix position.
-
+**Example:**\
+![image](https://github.com/user-attachments/assets/5d5869c1-073b-4d5d-8a58-b90cb8b5c09a)
+\
 ## Troubleshooting
 If your VIA JSON fails to load or LEDs appear in the wrong spots:
 - **Validate JSON syntax**  
