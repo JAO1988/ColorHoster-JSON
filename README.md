@@ -58,13 +58,13 @@ To the bottom of your `rules.mk`. Save and close the file.
 4. Update the keyboard `keymap.c` file
 At the bottom of your `keymap.c` file, add the following lines for ColorHoster direct mode control:
 
-#uint8_t color_buffer[RGB_MATRIX_LED_COUNT * 2] = {0};
-#uint8_t brightness_buffer[RGB_MATRIX_LED_COUNT] = {[0 ... RGB_MATRIX_LED_COUNT - 1] = 255};
+`#uint8_t color_buffer[RGB_MATRIX_LED_COUNT * 2] = {0};`
+`#uint8_t brightness_buffer[RGB_MATRIX_LED_COUNT] = {[0 ... RGB_MATRIX_LED_COUNT - 1] = 255};`
 
-#ifdef VIA_ENABLE
-void via_custom_value_command_kb(uint8_t *data, uint8_t length) {
-    uint8_t channel_id = data[1];
-    if (channel_id != id_custom_channel) return;
+`#ifdef VIA_ENABLE`
+`void via_custom_value_command_kb(uint8_t *data, uint8_t length) {`
+    `uint8_t channel_id = data[1];`
+    `if (channel_id != id_custom_channel) return;`
 
     uint8_t *command_id = &(data[0]);
     uint8_t value_id    = data[2];
@@ -97,6 +97,6 @@ void via_custom_value_command_kb(uint8_t *data, uint8_t length) {
             break;
     }
 }
-#endif // VIA_ENABLE
+`#endif // VIA_ENABLE`
 
 6. 
