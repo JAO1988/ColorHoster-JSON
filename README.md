@@ -98,9 +98,8 @@ void via_custom_value_command_kb(uint8_t *data, uint8_t length) {
 }
 #endif // VIA_ENABLE
 ```
+You're now ready to compile your added keyboard firwmware with ColorHoster direct mode patched in.
 ## Flashing
-With your CLI in the root of your QMK firmware folder, run:
-
-## bash
-```qmk setup --clean -kb keychron/k2_he/ansi -km viach```
+With your favorite Command-Line Application of choice open, in the root of your QMK firmware folder, run:
+```qmk setup --clean -kb keychron/k2_he/ansi -km viach```\
 This will compile and flash your QMK firmware with ColorHoster direct-mode support.
