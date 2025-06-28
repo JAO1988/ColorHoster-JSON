@@ -22,8 +22,7 @@ An OpenRGB-compatible, high-performance SDK server for VIA per-key RGB firmware 
   Save/load lighting configurations  
 
 ---
-
-## Repository Structure\
+## Repository Structure
 This repository is used for storing **pre-built VIA JSON files** with ColorHoster direct mode included. Each vendor folder contains the respective keyboard and its regional variant (ISO/ANSI/JIS/etc.) VIA JSON.
 ---
 
