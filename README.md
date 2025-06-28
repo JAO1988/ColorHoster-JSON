@@ -39,7 +39,7 @@ This repo stores **pre-built VIA JSON files** for various keyboard vendors. Each
 
 Inside you’ll find two top-level folders:
 
-**direct-mode/ — custom ColorHoster animation files**
+**direct-mode/ — custom ColorHoster animation files**\
 **keyboard/ — vendor-specific JSONs**
 
 1. Patch Your QMK Keymap:\
