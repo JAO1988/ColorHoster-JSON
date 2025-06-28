@@ -223,7 +223,7 @@ If your VIA JSON fails to load or LEDs appear in the wrong spots:
 - Add new vendor JSONs under the `keyboard` folder with a `Readme.md` file which includes a QMK Repsoitory Github URL and basic setup commands to pull the repository.
 
 ## Thanks
-**[Azarattum](https://github.com/Azarattum/) - Creator and maintainer of the [Color Hoster](https://github.com/Azarattum/ColorHoster) project**
-**[JAO1988/Siphoned Anomaly](https://github.com/JAO1988/) - Maintainer of the ColorHoster-JSON repository and resident OpenRGB tech robot. 🤖
+**[Azarattum](https://github.com/Azarattum/) - Creator and maintainer of the [Color Hoster](https://github.com/Azarattum/ColorHoster) project**\
+**[JAO1988/Siphoned Anomaly](https://github.com/JAO1988/) - Maintainer of the ColorHoster-JSON repository and resident OpenRGB tech robot. 🤖**
 
 Happy flashing! 🚀
