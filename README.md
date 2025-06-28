@@ -33,7 +33,7 @@ This repo stores **pre-built VIA JSON files** for various keyboard vendors. Each
 
 ## Getting Started
 
-### Cloning the ColorHoster-JSON Repo
+## Cloning the ColorHoster-JSON Repo
 You can clone this project by either downloading the zip file:
 ![image](https://github.com/user-attachments/assets/87549ffb-6b6b-4274-8883-cba9a68b7e5e)
 
@@ -46,7 +46,7 @@ Inside you’ll find two top-level folders:
 **keyboard/ — vendor-specific JSONs**
 
 
-### Building your ColorHoster QMK Firmware
+## Building your ColorHoster QMK Firmware
 1. Patch your QMK Keymap:\
 Locate your keyboard under the `/keyboards/` folder within the QMK project files.
 Create a new keymap folder (-km) in your QMK tree, for example:\
