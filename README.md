@@ -215,7 +215,7 @@ If your VIA JSON fails to load or LEDs appear in the wrong spots:
   • Support questsions or concerns for QMK-related issues should be relayed to the `qmk-firmware-hacking` channel.
 
 ## Contributing
-- Add new vendor JSONs under the `keyboard` folder. New keyboard vendors should have their own separate folder with additional models being delcared separately. *(eg: keychron\k2_he)*
+- Add new vendor JSONs under the `keyboard` folder. New keyboard vendors should have their own separate folder with additional models being delcared separately. *(eg: keychron/k2_he)*
 - Additional layout variants can be nested in a separate folder or should have their JSONs renamed with the appropriate layout *(eg: k2_he_ansi_rgb.json)*
 
 ## Thanks
