@@ -181,7 +181,7 @@ In the same JSON file, add these under the parameters section:
 ![image](https://github.com/user-attachments/assets/96d4e6af-c670-4100-80ba-9a751cff6c4d)
 \
 3. Declare LEDs in the layout section
-Under the "layout" → "keymap" section, each LED is declared as:
+• Under the "layout" → "keymap" section, each LED is declared as:
 
 ```
 "0,0\nl0",
