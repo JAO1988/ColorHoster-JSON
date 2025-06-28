@@ -31,8 +31,8 @@ This repo stores **pre-built VIA JSON files** for various keyboard vendors. Each
 2. Basic QMK instructions for pulling down firmware
 ---
 
-### Getting Started
-\
+### Getting Started ###
+
 ## Cloning the ColorHoster-JSON Repo
 You can clone this project by either downloading the zip file:
 ![image](https://github.com/user-attachments/assets/87549ffb-6b6b-4274-8883-cba9a68b7e5e)
