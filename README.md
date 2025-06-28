@@ -103,7 +103,7 @@ void via_custom_value_command_kb(uint8_t *data, uint8_t length) {
 }
 #endif // VIA_ENABLE
 ```
-\Example:
+**Example:**
 ![image](https://github.com/user-attachments/assets/8f75d7cb-1e2d-484e-82eb-ac53dfdab688)
 
 You're now ready to compile your added keyboard firmware with ColorHoster direct mode patched in.
