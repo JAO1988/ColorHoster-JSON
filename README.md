@@ -25,10 +25,7 @@ An OpenRGB-compatible, high-performance SDK server for VIA per-key RGB firmware 
 
 ## Repository Structure
 
-This repository is used for storing **pre-built VIA JSON files** with ColorHoster direct mode included. Each vendor folder contains:
-
-1. A link to the manufacturer’s QMK firmware GitHub repository
-2. Basic QMK instructions for pulling down firmware
+This repository is used for storing **pre-built VIA JSON files** with ColorHoster direct mode included. Each vendor folder contains the respective keyboard and its regional variant (ISO/ANSI/JIS/etc.) VIA JSON.
 ---
 
 ## Getting Started
@@ -221,6 +218,7 @@ If your VIA JSON fails to load or LEDs appear in the wrong spots:
 
 ## Contributing
 - Add new vendor JSONs under the `keyboard` folder with a `Readme.md` file which includes a QMK Repsoitory Github URL and basic setup commands to pull the repository.
+- Ensure new layout variants are nested in a separate folder or JSON files are named as such *(eg: k2_he_ansi_rgb.json)* for users to correctly identify which JSON should be used for their keyboard.
 
 ## Thanks
 **[Azarattum](https://github.com/Azarattum/) - Creator and maintainer of the [Color Hoster](https://github.com/Azarattum/ColorHoster) project**\
