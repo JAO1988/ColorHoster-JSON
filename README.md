@@ -204,9 +204,9 @@ Under the "layout" → "keymap" section, each LED is declared as:
 ]
 ```
 - The string "row,col\nl*" binds LED index * at grid position (row,col).
-- Begin at "0,0\nl0" and increment the LED index for each matrix position...
+- Begin at "0,0\nl0" and increment the LED index for each matrix position.
 ![image](https://github.com/user-attachments/assets/5d5869c1-073b-4d5d-8a58-b90cb8b5c09a)
-\
+
 ## Troubleshooting
 If your VIA JSON fails to load or LEDs appear in the wrong spots:
 - **Validate JSON syntax**  
