@@ -218,7 +218,7 @@ If your VIA JSON fails to load or LEDs appear in the wrong spots:
 
 ## Contributing
 - Add new vendor JSONs under the `keyboard` folder. New keyboard vendors should have their own separate folder with additional models being delcared separately. *(eg: keychron\k2_he)*
-- Additional layout variants can be nested in a separate folder or should have their JSON files are named with the appropriate layout *(eg: k2_he_ansi_rgb.json)*
+- Additional layout variants can be nested in a separate folder or should have their JSONs renamed with the appropriate layout *(eg: k2_he_ansi_rgb.json)*
 
 ## Thanks
 **[Azarattum](https://github.com/Azarattum/) - Creator and maintainer of the [Color Hoster](https://github.com/Azarattum/ColorHoster) project**\
