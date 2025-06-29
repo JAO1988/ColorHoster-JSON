@@ -106,7 +106,7 @@ void via_custom_value_command_kb(uint8_t *data, uint8_t length) {
 **Example:**
 ![image](https://github.com/user-attachments/assets/8f75d7cb-1e2d-484e-82eb-ac53dfdab688)
 
-You're now ready to compile your added keyboard firmware with ColorHoster direct mode patched in.
+You're now ready to compile your keyboard firmware with Color Hoster direct mode patched in.
 ## Flashing
 With your favorite Command-Line Application of choice, begin compiling your new keymap for your keyboard.\
 **Example:** ```qmk compile --clean -kb keychron/k2_he/ansi -km viach```
