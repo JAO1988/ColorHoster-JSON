@@ -62,8 +62,8 @@ Save and close the file.
 5. Update the keyboard `keymap.c` file:\
 At the bottom of your `keymap.c` file, add the following lines for ColorHoster direct mode control:
 ```
-#uint8_t color_buffer[RGB_MATRIX_LED_COUNT * 2] = {0};
-#uint8_t brightness_buffer[RGB_MATRIX_LED_COUNT] = {[0 ... RGB_MATRIX_LED_COUNT - 1] = 255};
+uint8_t color_buffer[RGB_MATRIX_LED_COUNT * 2] = {0};
+uint8_t brightness_buffer[RGB_MATRIX_LED_COUNT] = {[0 ... RGB_MATRIX_LED_COUNT - 1] = 255};
 
 #ifdef VIA_ENABLE
 void via_custom_value_command_kb(uint8_t *data, uint8_t length) {
@@ -111,7 +111,7 @@ You're now ready to compile your keyboard firmware with Color Hoster direct mode
 With your favorite Command-Line Application of choice, begin compiling your new keymap for your keyboard.\
 **Example:** ```qmk compile --clean -kb keychron/k2_he/ansi -km viach```
 
-This will compile your QMK firmware with Color Hoster direct-mode support. You can use the [QMK Toolbox](https://qmk.fm/toolbox) GUI flashing tool or the `qmk flash` command in substition of `qmk compile` to compile and flash your keyboard from the CLI.
+This will compile your QMK firmware with Color Hoster direct-mode support. You can use the [QMK Toolbox](https://qmk.fm/toolbox) GUI flashing tool or the `qmk flash` command in substition of `qmk compile` to compile and flash your keyboard from Command-Line.
 ## VIA JSON Configuration
 To expose your Direct-mode animations in VIA, update the JSON for your keyboard:
 
@@ -214,7 +214,7 @@ If your VIA JSON fails to load or LEDs appear in the wrong spots:
   • All content arrays (`["id_qmk_rgb_matrix_color", 3, 4]`, etc.) must reference valid VIA channel IDs and lengths.
 - **Still unsure?**\
   • Reach out to JAO1988 (Siphoned Anomaly) within the `OpenRGB` Discord Channel.\
-  • Support questsions or concerns for QMK-related issues should be relayed to the `qmk-firmware-hacking` channel.
+  • Support questions or concerns for QMK-related issues should be relayed to the `qmk-firmware-hacking` channel.
 
 ## Contributing
 - Add new vendor JSONs under the `keyboard` folder. New keyboard vendors should have their own separate folder with additional models being delcared separately. *(eg: keychron/k2_he)*
