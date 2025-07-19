@@ -151,7 +151,7 @@ Under the "Effects" array, append a new entry in the options:
 **Example:**\
 ![image](https://github.com/user-attachments/assets/420eb98d-4bad-4b85-a945-90cb524fc719)
 \
-2. Add Direct-Mode Parameters - In the keyboard JSON file, add the color palette parameters under the "options" section:
+2. Direct-Mode Parameters - Add the new parameters under the "options" section:
 ```
 // Effect Speed (for all except Off & Direct)
 {
