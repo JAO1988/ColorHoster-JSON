@@ -1,5 +1,5 @@
 # [Color Hoster](https://github.com/Azarattum/ColorHoster) 🌈 ⌨️
-
+https://github.com/JAO1988/ColorHoster-JSON
 An OpenRGB-compatible, high-performance SDK server for VIA per-key RGB firmware flashing and animation. This repository is used to store Color Hoster VIA-Compatible JSON files for various QMK Compatible Keyboards, as well as provide instructions for building and compiling your own Color Hoster-capable QMK firmware.
 
 ---
@@ -151,8 +151,7 @@ Under the "Effects" array, append a new entry in the options:
 **Example:**\
 ![image](https://github.com/user-attachments/assets/420eb98d-4bad-4b85-a945-90cb524fc719)
 \
-2. Add Direct-Mode Parameters:\
-In the same JSON file, add these under the parameters section:
+2. Add Direct-Mode Parameters - In the keyboard JSON file, add the new color paremeters under the "options" section:
 ```
 // Effect Speed (for all except Off & Direct)
 {
