@@ -89,7 +89,7 @@
     {"name": "2.4G", "title": "2.4G", "shortName": "2.4G"},
     {"name": "Battery Level", "title": "Show battery level", "shortName": "Batt"}
   ],
-  "matrix": {"rows": 6, "cols" : 16},
+  "matrix": {"rows": 8, "cols" : 16},
     "layouts": {
       "keymap": [
         [
@@ -128,7 +128,7 @@
         {
           "x": 0.5
         },
-        "0,15\nl82\n\n\n\n\n\n\n\n\ne0"
+        "0,15\nl94\n\n\n\n\n\n\n\n\ne0"
       ],
       [
         {
@@ -286,6 +286,22 @@
         "5,13\nl79",
         "5,14\nl80",
         "5,15\nl81"
+      ],
+      [
+        "6,0\nl82",
+        "6,1\nl83",
+        "6,2\nl84",
+        "6,3\nl85",
+        "6,4\nl86",
+        "6,5\nl87"
+      ],
+      [
+        "7,0\nl88",
+        "7,1\nl89",
+        "7,2\nl90",
+        "7,3\nl91",
+        "7,4\nl92",
+        "7,5\nl93"
       ]
     ]
   }
