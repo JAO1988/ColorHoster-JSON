@@ -213,7 +213,7 @@ If your VIA JSON fails to load or LEDs appear in the wrong spots:
   • All content arrays (`["id_qmk_rgb_matrix_color", 3, 4]`, etc.) must reference valid VIA channel IDs and lengths.
 - **Still unsure?**\
   • Reach out to JAO1988 (Siphoned Anomaly) within the `OpenRGB` Discord Channel.\
-  • Support questions or concerns for QMK-related issues should be relayed to the `qmk-firmware-hacking` channel.
+  • Support questions or concerns for QMK-related issues should be relayed to the `qmk-firmware` and `colorhoster` channels.
 
 ## Contributing
 - Add new vendor JSONs under the `keyboard` folder. New keyboard vendors should have their own separate folder with additional models being delcared separately. *(eg: keychron/k2_he)*
