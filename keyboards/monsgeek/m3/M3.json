@@ -40,7 +40,7 @@
                   ["SOLID_REACTIVE", 16],
                   ["SOLID_REACTIVE_NEXUS", 17],
                   ["MATRIX_MULTISPLASH", 18],
-                  ["DIRECT", 19]
+                  ["Direct", 19]
                 ]
               },
               {
