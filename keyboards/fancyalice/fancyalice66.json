@@ -1,0 +1,344 @@
+{
+  "name": "FancyAlice 66",
+  "vendorId": "0xECED",
+  "productId": "0x3663",
+  "matrix": {
+    "rows": 5,
+    "cols": 16
+  },
+  "keycodes": [
+    "qmk_lighting"
+  ],
+    "menus": [
+    {
+      "label": "Lighting",
+      "content": [
+        {
+          "label": "Backlight",
+          "content": [
+            {
+              "label": "Brightness",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
+            },
+            {
+              "label": "Effect",
+              "type": "dropdown",
+              "content": ["id_qmk_rgb_matrix_effect", 3, 2],
+              "options": [
+                ["None", 0],
+                ["Solid Color", 1],
+                ["Breathing", 2],
+                ["Band Spiral Val", 3],
+                ["Cycle All", 4],
+                ["Cycle Left Right", 5],
+                ["Cycle Up Down", 6],
+                ["Rainbow Moving Chevron", 7],
+                ["Cycle Out In", 8],
+                ["Cycle Out In Dual", 9],
+                ["Cycle Pinwheel", 10],
+                ["Cycle Spiral", 11],
+                ["Dual Beacon", 12],
+                ["Rainbow Beacon", 13],
+                ["Jellybean Raindrops", 14],
+                ["Pixel Rain", 15],
+                ["Typing Heatmap", 16],
+                ["Digital Rain", 17],
+                ["Reactive Simple", 18],
+                ["Reactive Multiwide", 19],
+                ["Reactive Multinexus", 20],
+                ["Splash", 21],
+                ["Solid Splash", 22],
+                ["Direct", 23]
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} > 1 && {id_qmk_rgb_matrix_effect} != 23",
+              "label": "Effect Speed",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 23 && ( {id_qmk_rgb_matrix_effect} < 4 || {id_qmk_rgb_matrix_effect} == 18 || ({id_qmk_rgb_matrix_effect} > 17 && {id_qmk_rgb_matrix_effect} != 21) ) ",
+              "label": "Color",
+              "type": "color",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} == 23",
+              "label": "Color Palette",
+              "type": "color-palette",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layouts": {
+    "keymap": [
+      [
+        {
+          "y": 0.7,
+          "x": 16.5,
+          "c": "#aaaaaa"
+        },
+        "0,15\nl0\n\n\n0,0",
+        "0,15\nl1\n\n\n0,1\n\n\n\n\n\ne0"
+      ],
+      [
+        {
+          "y": -0.9,
+          "x": 2.75,
+          "c": "#cccccc"
+        },
+        "0,2\nl2",
+        {
+          "x": 8.4
+        },
+        "0,11\nl3"
+      ],
+      [
+        {
+          "y": -0.85,
+          "x": 0.75,
+          "c": "#777777"
+        },
+        "0,0\nl4",
+        {
+          "c": "#cccccc"
+        },
+        "0,1\nl5",
+        {
+          "x": 10.4
+        },
+        "0,12\nl6",
+        {
+          "c": "#aaaaaa",
+          "w": 2
+        },
+        "0,13\nl7"
+      ],
+      [
+        {
+          "y": -0.25,
+          "x": 16.75
+        },
+        "1,15\nl8"
+      ],
+      [
+        {
+          "y": -0.75,
+          "x": 0.5,
+          "w": 1.5
+        },
+        "1,0\nl9",
+        {
+          "c": "#cccccc"
+        },
+        "1,1\nl10",
+        {
+          "x": 9.9
+        },
+        "1,12\nl11",
+        "1,13\nl12",
+        {
+          "c": "#aaaaaa",
+          "w": 1.5
+        },
+        "1,14\nl13"
+      ],
+      [
+        {
+          "y": -0.25,
+          "x": 17
+        },
+        "2,15\nl14"
+      ],
+      [
+        {
+          "y": -0.75,
+          "x": 0.25,
+          "w": 1.75
+        },
+        "2,0\nl15",
+        {
+          "c": "#cccccc"
+        },
+        "2,1\nl16",
+        {
+          "x": 9.5
+        },
+        "2,11\nl17",
+        "2,12\nl18",
+        {
+          "c": "#aaaaaa",
+          "w": 2.25
+        },
+        "2,13\nl19"
+      ],
+      [
+        {
+          "y": -4.440892098500626e-16,
+          "w": 2.25
+        },
+        "3,0\nl20",
+        {
+          "c": "#cccccc"
+        },
+        "3,1\nl21",
+        {
+          "x": 10.75,
+          "c": "#aaaaaa",
+          "w": 1.75
+        },
+        "3,12\nl22"
+      ],
+      [
+        {
+          "y": -0.9999999999999996,
+          "x": 13,
+          "c": "#cccccc"
+        },
+        "3,11\nl23"
+      ],
+      [
+        {
+          "y": -0.75,
+          "x": 16,
+          "c": "#777777"
+        },
+        "3,14\nl24"
+      ],
+      [
+        {
+          "y": -0.25,
+          "c": "#aaaaaa",
+          "w": 1.5
+        },
+        "4,0\nl25"
+      ],
+      [
+        {
+          "y": -0.75,
+          "x": 15,
+          "c": "#777777"
+        },
+        "4,13\nl26",
+        "4,14\nl27",
+        "4,15\nl28"
+      ],
+      [
+        {
+          "r": 12.5,
+          "ry": 0.25,
+          "y": -0.1,
+          "x": 4,
+          "c": "#cccccc"
+        },
+        "0,3\nl29",
+        "0,4\nl30",
+        "0,5\nl31",
+        "0,6\nl32"
+      ],
+      [
+        {
+          "x": 3.5
+        },
+        "1,2\nl33",
+        "1,3\nl34",
+        "1,4\nl35",
+        "1,5\nl36"
+      ],
+      [
+        {
+          "x": 3.75
+        },
+        "2,2\nl37",
+        "2,3\nl38",
+        "2,4\nl39",
+        "2,5\nl40"
+      ],
+      [
+        {
+          "x": 4.25
+        },
+        "3,2\nl41",
+        "3,3\nl42",
+        "3,4\nl43",
+        "3,5\nl44"
+      ],
+      [
+        {
+          "x": 4,
+          "c": "#aaaaaa",
+          "w": 1.5
+        },
+        "4,2\nl45",
+        {
+          "c": "#cccccc",
+          "w": 2.25
+        },
+        "4,3\nl46",
+        {
+          "c": "#aaaaaa"
+        },
+        "4,6\nl47"
+      ],
+      [
+        {
+          "r": -12.5,
+          "y": -1.5499999999999998,
+          "x": 7.5,
+          "c": "#cccccc"
+        },
+        "0,7\nl48",
+        "0,8\nl49",
+        "0,9\nl50",
+        "0,10\nl51"
+      ],
+      [
+        {
+          "x": 7
+        },
+        "1,7\nl52",
+        "1,8\nl53",
+        "1,9\nl54",
+        "1,10\nl55",
+        "1,11\nl56"
+      ],
+      [
+        {
+          "x": 7.25
+        },
+        "2,7\nl57",
+        "2,8\nl58",
+        "2,9\nl59",
+        "2,10\nl60"
+      ],
+      [
+        {
+          "x": 7.5
+        },
+        "3,7\nl61",
+        "3,8\nl62",
+        "3,9\nl63",
+        "3,10\nl64"
+      ],
+      [
+        {
+          "x": 7.25,
+          "w": 2.75
+        },
+        "4,7\nl65",
+        {
+          "c": "#aaaaaa",
+          "w": 1.5
+        },
+        "4,10\nl66"
+      ]
+    ]
+  }
+}
