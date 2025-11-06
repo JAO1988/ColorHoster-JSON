@@ -25,7 +25,7 @@ An OpenRGB-compatible, high-performance SDK server for VIA per-key RGB firmware 
 
 This repository is used for storing **pre-built VIA JSON files** with ColorHoster direct mode included. Each vendor folder contains the respective keyboard and its regional variant (ISO/ANSI/JIS/etc.) VIA JSON. 
 
-If you can't find your keyboard, there's instructions on how-to convert an existing VIA JSON file into a ColorHoster compatible JSON.
+If you can't find your keyboard in the `keyboards` vendor folder, there's instructions below on how-to convert an existing VIA JSON into a ColorHoster compatible JSON file.
 
 ---
 
