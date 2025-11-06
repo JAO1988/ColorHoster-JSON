@@ -1,5 +1,5 @@
 # [Color Hoster](https://github.com/Azarattum/ColorHoster) 🌈 ⌨️
-An OpenRGB-compatible, high-performance SDK server for VIA per-key RGB firmware flashing and animation. This repository is used to store Color Hoster VIA-Compatible JSON files for various QMK Compatible Keyboards, as well as provide instructions for building and compiling your own Color Hoster-capable QMK firmware.
+An OpenRGB-compatible, high-performance SDK server for VIA per-key RGB firmware flashing and animation. This repository is used to store Color Hoster VIA-Compatible JSON files for various QMK Compatible Keyboards, as well as provide instructions for building and compiling your own ColorHoster-capable QMK firmware.
 
 ---
 
@@ -23,7 +23,7 @@ An OpenRGB-compatible, high-performance SDK server for VIA per-key RGB firmware 
 ---
 ## Repository Structure
 
-This repository is used for storing **pre-built VIA JSON files** with Color Hoster direct mode included. Each vendor folder contains the respective keyboard and its regional variant (ISO/ANSI/JIS/etc.) VIA JSON.
+This repository is used for storing **pre-built VIA JSON files** with ColorHoster direct mode included. Each vendor folder contains the respective keyboard and its regional variant (ISO/ANSI/JIS/etc.) VIA JSON. If you can't find your keyboard, there's instructions on how-to convert an existing VIA JSON file into a ColorHoster compatible JSON.
 
 ---
 
