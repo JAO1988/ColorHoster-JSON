@@ -207,7 +207,7 @@ Under the "Effects" array, append a new entry in the options:
 ## Troubleshooting
 If your VIA JSON fails to load or LEDs appear in the wrong spots:
 - **Validate JSON syntax**  
-  • Inspect your modified VIA JSON file ensure missing commas, unquoted keys, or stray braces are corrected.\
+  • Inspect your modified VIA JSON file to ensure missing commas, unquoted keys, or stray braces are corrected.\
   • You can use an online JSON inspect tool like *JSON Lint* https://jsonlint.com to highlight subtle formatting errors.
 - **Check `"id_qmk_rgb_matrix_effect"` indices**  
   • Ensure the `"Direct"` effect ID matches your firmware’s `RGB_MATRIX_EFFECT_COUNT` offset—off-by-one here prevents VIA from recognizing the dropdown.  
