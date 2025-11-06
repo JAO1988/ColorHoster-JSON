@@ -44,7 +44,7 @@ Inside you’ll find two top-level folders:
 **keyboard** — vendor-specific VIA JSON files
 
 
-### Building your Color Hoster QMK Firmware
+### Building your ColorHoster QMK Firmware
 1. Patch your QMK Keymap:\
 Locate your keyboard under the `/keyboards/` folder within the QMK project files.
 Create a new keymap folder (-km) in your QMK tree, for example:\
@@ -114,7 +114,7 @@ With your favorite Command-Line Application of choice, begin compiling your new 
 
 This will compile your QMK firmware with Color Hoster direct-mode support. You can use the [QMK Toolbox](https://qmk.fm/toolbox) GUI flashing tool or the `qmk flash` command in substition of `qmk compile` to compile and flash your keyboard from Command-Line.
 ## VIA JSON Configuration
-To expose your Direct-mode animations in VIA, update the JSON for your keyboard:
+To expose your Direct-mode animations in VIA, update the JSON file for your keyboard:
 
 1. Add the “Direct” Effect
 Under the "Effects" array, append a new entry in the options:
