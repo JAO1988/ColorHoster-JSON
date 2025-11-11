@@ -1,5 +1,5 @@
 # [Color Hoster](https://github.com/Azarattum/ColorHoster) 🌈 ⌨️
-An OpenRGB-compatible, high-performance SDK server for VIA per-key RGB firmware flashing and animation. This repository is used to store Color Hoster VIA-Compatible JSON files for various QMK Compatible Keyboards, as well as provide instructions for building and compiling your own Color Hoster-capable QMK firmware.
+An OpenRGB-compatible, high-performance SDK server for VIA per-key RGB firmware flashing and animation. This repository is used to store Color Hoster VIA-Compatible JSON files for various QMK Compatible Keyboards, as well as provide instructions for building and compiling your own ColorHoster-capable QMK firmware.
 
 ---
 
@@ -23,7 +23,9 @@ An OpenRGB-compatible, high-performance SDK server for VIA per-key RGB firmware 
 ---
 ## Repository Structure
 
-This repository is used for storing **pre-built VIA JSON files** with Color Hoster direct mode included. Each vendor folder contains the respective keyboard and its regional variant (ISO/ANSI/JIS/etc.) VIA JSON.
+This repository is used for storing **pre-built VIA JSON files** with ColorHoster direct mode included. Each vendor folder contains the respective keyboard and its regional variant (ISO/ANSI/JIS/etc.) VIA JSON. 
+
+If you can't find your keyboard in the `keyboards` vendor folder, there's instructions below on how-to convert an existing VIA JSON into a ColorHoster compatible JSON file.
 
 ---
 
@@ -42,7 +44,7 @@ Inside you’ll find two top-level folders:
 **keyboard** — vendor-specific VIA JSON files
 
 
-### Building your Color Hoster QMK Firmware
+### Building your ColorHoster QMK Firmware
 1. Patch your QMK Keymap:\
 Locate your keyboard under the `/keyboards/` folder within the QMK project files.
 Create a new keymap folder (-km) in your QMK tree, for example:\
@@ -112,7 +114,7 @@ With your favorite Command-Line Application of choice, begin compiling your new 
 
 This will compile your QMK firmware with Color Hoster direct-mode support. You can use the [QMK Toolbox](https://qmk.fm/toolbox) GUI flashing tool or the `qmk flash` command in substition of `qmk compile` to compile and flash your keyboard from Command-Line.
 ## VIA JSON Configuration
-To expose your Direct-mode animations in VIA, update the JSON for your keyboard:
+To expose your Direct-mode animations in VIA, update the JSON file for your keyboard:
 
 1. Add the “Direct” Effect
 Under the "Effects" array, append a new entry in the options:
@@ -205,10 +207,10 @@ Under the "Effects" array, append a new entry in the options:
 ## Troubleshooting
 If your VIA JSON fails to load or LEDs appear in the wrong spots:
 - **Validate JSON syntax**  
-  • Inspect your modified VIA JSON file ensure missing commas, unquoted keys, or stray braces are corrected.\
+  • Inspect your modified VIA JSON file to ensure missing commas, unquoted keys, or stray braces are corrected.\
   • You can use an online JSON inspect tool like *JSON Lint* https://jsonlint.com to highlight subtle formatting errors.
 - **Check `"id_qmk_rgb_matrix_effect"` indices**  
-  • Ensure the `"Direct"` effect ID matches your firmware’s `RGB_MATRIX_EFFECT_COUNT` offset—off-by-one here prevents VIA from recognizing the dropdown.  
+  • Ensure the `"Direct"` effect ID matches your firmware’s `RGB_MATRIX_EFFECT_COUNT`. Offset off-by-one prevents VIA from recognizing the new effect in the dropdown menu.  
   • All content arrays (`["id_qmk_rgb_matrix_color", 3, 4]`, etc.) must reference valid VIA channel IDs and lengths.
 - **Still unsure?**\
   • Reach out to JAO1988 (Siphoned Anomaly) within the `OpenRGB` Discord Channel.\
