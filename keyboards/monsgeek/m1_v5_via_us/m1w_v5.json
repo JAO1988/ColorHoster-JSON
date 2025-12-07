@@ -1,0 +1,292 @@
+{
+  "name": "M1 V5 VIA",
+  "vendorId": "0x342d",
+  "productId": "0xe4c5",
+  "keycodes": ["qmk_lighting"],
+  "menus": [
+    {
+      "label": "Lighting",
+      "content": [
+        {
+          "label": "Backlight",
+          "content": [
+            {
+              "label": "Brightness",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
+            },
+            {
+              "label": "Effect",
+              "type": "dropdown",
+              "content": ["id_qmk_rgb_matrix_effect", 3, 2],
+              "options": [
+                ["All Off", 0],
+                ["Solid Color", 1],
+                ["Alphas Mods", 2],
+                ["Gradient Up Down", 3],
+                ["Gradient Left Right", 4],
+                ["Breathing", 5],
+                ["Band Sat", 6],
+                ["Band Val", 7],
+                ["Band Pinwheel Sat", 8],
+                ["Band Pinwheel Val", 9],
+                ["Band Spiral Sat", 10],
+                ["Band Spiral Val", 11],
+                ["Cycle All", 12],
+                ["Cycle Left Right", 13],
+                ["Cycle Up Down", 14],
+                ["Rainbow Moving Chevron", 15],
+                ["Cycle Out In", 16],
+                ["Cycle Out In Dual", 17],
+                ["Cycle Pinwheel", 18],
+                ["Cycle Spiral", 19],
+                ["Dual Beacon", 20],
+                ["Rainbow Beacon", 21],
+                ["Rainbow Pinwheels", 22],
+                ["Raindrops", 23],
+                ["Jellybean Raindrops", 24],
+                ["Hue Breathing", 25],
+                ["Hue Pendulum", 26],
+                ["Hue Wave", 27],
+                ["Pixel Rain", 28],
+                ["Pixel Flow", 29],
+                ["Pixel Fractal", 30],
+                ["Typing Heatmap", 31],
+                ["Digital Rain", 32],
+                ["Solid Reactive Simple", 33],
+                ["Solid Reactive", 34],
+                ["Solid Reactive Wide", 35],
+                ["Solid Reactive Multiwide", 36],
+                ["Solid Reactive Cross", 37],
+                ["Solid Reactive Multicross", 38],
+                ["Solid Reactive Nexus", 39],
+                ["Solid Reactive Multinexus", 40],
+                ["Splash", 41],
+                ["Multisplash", 42],
+                ["Solid Splash", 43],
+                ["Solid Multisplash", 44],
+                ["Direct", 45],
+                ["Flower Blooming", 46],
+                ["Digital Rain", 47],
+                ["Starlight", 48],
+                ["Starlight Smooth", 49],
+                ["Starlight Duel Hue", 50],
+                ["Starlight Dual Sat", 51],
+                ["Riverflow", 52]
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 45",
+              "label": "Effect Speed",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 24 && {id_qmk_rgb_matrix_effect} != 28 && {id_qmk_rgb_matrix_effect} != 29 && {id_qmk_rgb_matrix_effect} != 32 && {id_qmk_rgb_matrix_effect} != 45",
+              "label": "Color",
+              "type": "color",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} == 45",
+              "label": "Color Palette",
+              "type": "color-palette",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "matrix": {"rows": 6, "cols": 15},
+  "customKeycodes": [
+    {"name": "BT DEV1","title": "BT Device 1","shortName": "DEV1"},
+    {"name": "BT DEV2","title": "BT Device 2","shortName": "DEV2"},
+    {"name": "BT DEV3","title": "BT Device 3","shortName": "DEV3"},
+    {"name": "BT DEV4","title": "BT Device 4","shortName": "DEV4"},
+    {"name": "BT DEV5","title": "BT Device 5","shortName": "DEV5"},
+    {"name": "2.4G","title": "2.4G","shortName": "DEV 2.4G"},
+    {"name": "USB","title": "USB","shortName": "DEV USB"}
+  ],
+  "layouts": {
+      "keymap":
+      [
+        [
+          {
+            "y": 0.25
+          },
+          "0,0\nl23",
+          {
+            "x": 0.5
+          },
+          "0,1\nl22",
+          "0,2\nl21",
+          "0,3\nl20",
+          "0,4\nl19",
+          {
+            "x": 0.25
+          },
+          "0,5\nl18",
+          "0,6\nl17",
+          "0,7\nl16",
+          "0,8\nl15",
+          {
+            "x": 0.25
+          },
+          "0,9\nl14",
+          "0,10\nl13",
+          "0,11\nl12",
+          "0,12\nl11",
+          {
+            "x": 0.25
+          },
+          "0,13\nl10",
+          {
+            "x": 0.5
+          },
+          "0,14\n\n\n\n\n\n\n\n\ne0"
+        ],
+        [
+          {
+            "y": 0.25
+          },
+          "1,0\nl24",
+          "1,1\nl25",
+          "1,2\nl26",
+          "1,3\nl27",
+          "1,4\nl28",
+          "1,5\nl29",
+          "1,6\nl30",
+          "1,7\nl31",
+          "1,8\nl32",
+          "1,9\nl33",
+          "1,10\nl34",
+          "1,11\nl35",
+          "1,12\nl36",
+          {
+            "w": 2.25
+          },
+          "1,13\nl37",
+          {
+            "x": 0.5
+          },
+          "1,14\nl9"
+        ],
+        [
+          {
+            "w": 1.5
+          },
+          "2,0\nl51",
+          "2,1\nl50",
+          "2,2\nl49",
+          "2,3\nl48",
+          "2,4\nl47",
+          "2,5\nl46",
+          "2,6\nl45",
+          "2,7\nl44",
+          "2,8\nl43",
+          "2,9\nl42",
+          "2,10\nl41",
+          "2,11\nl40",
+          "2,12\nl39",
+          {
+            "w": 1.75
+          },
+          "2,13\nl38",
+          {
+            "x": 0.5
+          },
+          "2,14\nl8"
+        ],
+        [
+          {
+            "w": 1.75
+          },
+          "3,0\nl52",
+          "3,1\nl53",
+          "3,2\nl54",
+          "3,3\nl55",
+          "3,4\nl56",
+          "3,5\nl57",
+          "3,6\nl58",
+          "3,7\nl59",
+          "3,8\nl60",
+          "3,9\nl61",
+          "3,10\nl62",
+          "3,11\nl63",
+          {
+            "w": 2.5
+          },
+          "3,13\nl64",
+          {
+            "x": 0.5
+          },
+          "3,14\nl7"
+        ],
+        [
+          {
+            "w": 2.25
+          },
+          "4,0\nl77",
+          "4,2\nl76",
+          "4,3\nl75",
+          "4,4\nl74",
+          "4,5\nl73",
+          "4,6\nl72",
+          "4,7\nl71",
+          "4,8\nl70",
+          "4,9\nl69",
+          "4,10\nl68",
+          "4,11\nl67",
+          {
+            "w": 2
+          },
+          "4,12\nl66",
+          {
+            "x": 1.5
+          },
+          "4,14\nl6"
+        ],
+        [
+          {
+            "y": -0.75,
+            "x": 14.5
+          },
+          "4,13\nl65"
+        ],
+        [
+          {
+            "y": -0.25,
+            "w": 1.25
+          },
+          "5,0\nl78",
+          {
+            "w": 1.25
+          },
+          "5,1\nl79",
+          {
+            "w": 1.25
+          },
+          "5,2\nl80",
+          {
+            "w": 6.5
+          },
+          "5,6\nl81",
+          "5,9\nl0",
+          "5,10\nl1",
+          "5,11\nl2"
+        ],
+        [
+          {
+            "y": -0.75,
+            "x": 13.5
+          },
+          "5,12\nl3",
+          "5,13\nl4",
+          "5,14\nl5"
+        ]
+      ]
+  }
+}

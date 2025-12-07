@@ -1,0 +1,338 @@
+{
+    "name": "Era75",
+    "vendorId": "0xFFFE",
+    "productId": "0x0057",
+    "keycodes": ["qmk_lighting"],
+    "menus": [
+      {
+        "label": "Lighting",
+        "content": [
+          {
+            "label": "Backlight",
+            "content": [
+              {
+                "label": "Brightness",
+                "type": "range",
+                "options": [0, 200],
+                "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
+              },
+              {
+                "label": "Effect",
+                "type": "dropdown",
+                "content": ["id_qmk_rgb_matrix_effect", 3, 2],
+                "options": [
+                  ["All Off", 0],
+                  ["Solid Color", 1],
+                  ["Alphas Mods", 2],
+                  ["Gradient Up/Down", 3],
+                  ["Gradient Left/Right", 4],
+                  ["Breathing", 5],
+                  ["Band Sat.", 6],
+                  ["Band Val.", 7],
+                  ["Pinwheel Sat.", 8],
+                  ["Pinwheel Val.", 9],
+                  ["Spiral Sat.", 10],
+                  ["Spiral Val.", 11],
+                  ["Cycle All", 12],
+                  ["Cycle Left/Right", 13],
+                  ["Cycle Up/Down", 14],
+                  ["Rainbow Moving Chevron", 15],
+                  ["Cycle Out/In", 16],
+                  ["Cycle Out/In Dual", 17],
+                  ["Cycle Pinwheel", 18],
+                  ["Cycle Spiral", 19],
+                  ["Dual Beacon", 20],
+                  ["Rainbow Beacon", 21],
+                  ["Rainbow Pinwheels", 22],
+                  ["Raindrops", 23],
+                  ["Jellybean Raindrops", 24],
+                  ["Hue Breathing", 25],
+                  ["Hue Pendulum", 26],
+                  ["Hue Wave", 27],
+                  ["Pixel Rain", 28],
+                  ["Pixel Flow", 29],
+                  ["Pixel Fractal", 30],
+                  ["Typing Heatmap", 31],
+                  ["Digital Rain", 32],
+                  ["Solid Reactive Simple", 33],
+                  ["Solid Reactive", 34],
+                  ["Solid Reactive Wide", 35],
+                  ["Solid Reactive Multi Wide", 36],
+                  ["Solid Reactive Cross", 37],
+                  ["Solid Reactive Multi Cross", 38],
+                  ["Solid Reactive Nexus", 39],
+                  ["Solid Reactive Multi Nexus", 40],
+                  ["Splash", 41],
+                  ["Multi Splash", 42],
+                  ["Solid Splash", 43],
+                  ["Solid Multi Splash", 44],
+                  ["Direct", 45],
+                  ["Flower Blooming", 46],
+                  ["Digital Rain", 47],
+                  ["Starlight", 48],
+                  ["Starlight Smooth", 49],
+                  ["Starlight Duel Hue", 50],
+                  ["Starlight Dual Sat", 51],
+                  ["Riverflow", 52]
+                ]
+              },
+              {
+                "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 45",
+                "label": "Effect Speed",
+                "type": "range",
+                "options": [0, 255],
+                "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+              },
+              {
+                "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 45 && ( {id_qmk_rgb_matrix_effect} < 4 || {id_qmk_rgb_matrix_effect} == 18 || ({id_qmk_rgb_matrix_effect} > 17 && {id_qmk_rgb_matrix_effect} != 21) )",
+                "label": "Color",
+                "type": "color",
+                "content": ["id_qmk_rgb_matrix_color", 3, 4]
+              },
+              {
+                "showIf": "{id_qmk_rgb_matrix_effect} == 45",
+                "label": "Color Palette",
+                "type": "color-palette",
+                "content": ["id_qmk_rgb_matrix_color", 3, 4]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "matrix": { "rows": 6, "cols": 16 },
+    "customKeycodes":[
+        {"name":"BT_HOST1","title":"BT_HOST1","shortName":"BT_HOST1"},
+        {"name":"BT_HOST2","title":"BT_HOST2","shortName":"BT_HOST2"},
+        {"name":"BT_HOST3","title":"BT_HOST3","shortName":"BT_HOST3"},
+        {"name":"BT_2_4G", "title":"BT_2_4G", "shortName":"BT_2_4G"},
+        {"name":"BT_USB",  "title":"BT_USB",  "shortName":"BT_USB"},
+        {"name":"BT_VOL",  "title":"BT_VOL",  "shortName":"BT_VOL"}
+      ],
+    "layouts": {
+        "presets": {"Default": [0,0]},
+        "labels": [
+          "ISO Enter",
+          "Split Left Shift",
+          "Encoder"
+        ],
+       "keymap":[
+        [
+          {
+            "x": 2.5,
+            "c": "#777777"
+          },
+          "0,0\nl0",
+          {
+            "x": 0.75,
+            "c": "#AAAAAA"
+          },
+          "0,1\nl1",
+          "0,2\nl2",
+          "0,3\nl3",
+          "0,4\nl4",
+          {
+            "x": 0.5
+          },
+          "0,5\nl5",
+          "0,6\nl6",
+          "0,7\nl7",
+          "0,8\nl8",
+          {
+            "x": 0.5
+          },
+          "0,9\nl9",
+          "0,10\nl10",
+          "0,11\nl11",
+          "0,12\nl12",
+          {
+            "x": 0.25
+          },
+          "2,15\n\n\n2,0\nl13",
+          {
+            "x": 0.25
+          },
+          "2,15\n\n\n2,1\n\n\n\n\n\ne0\nl13"
+        ],
+        [
+          {
+            "y": 0.25,
+            "x": 2.5
+          },
+          "1,0\nl14",
+          {
+            "c": "#cccccc"
+          },
+          "1,1\nl15",
+          "1,2\nl16",
+          "1,3\nl17",
+          "1,4\nl18",
+          "1,5\nl19",
+          "1,6\nl20",
+          "1,7\nl21",
+          "1,8\nl22",
+          "1,9\nl23",
+          "1,10\nl24",
+          "1,11\nl25",
+          "1,12\nl26",
+          {
+            "c": "#AAAAAA",
+            "w": 2
+          },
+          "1,13\nl27",
+          "1,15\nl28"
+        ],
+        [
+          {
+            "x": 2.5,
+            "w": 1.5
+          },
+          "2,0\nl29",
+          {
+            "c": "#cccccc"
+          },
+          "2,1\nl30",
+          "2,2\nl31",
+          "2,3\nl32",
+          "2,4\nl33",
+          "2,5\nl34",
+          "2,6\nl35",
+          "2,7\nl36",
+          "2,8\nl37",
+          "2,9\nl38",
+          "2,10\nl39",
+          "2,11\nl40",
+          "2,12\nl41",
+          {
+            "c": "#AAAAAA",
+            "w": 1.5
+          },
+          "2,13\n\n\n0,0\nl42",
+          "3,15\nl43",
+          {
+            "x": 1.25,
+            "c": "#777777",
+            "w": 1.25,
+            "h": 2,
+            "w2": 1.5,
+            "h2": 1,
+            "x2": -0.25
+          },
+          "3,13\n\n\n0,1\nl57"
+        ],
+        [
+          {
+            "x": 2.5,
+            "c": "#AAAAAA",
+            "w": 1.75
+          },
+          "3,0\nl44",
+          {
+            "c": "#cccccc"
+          },
+          "3,1\nl45",
+          "3,2\nl46",
+          "3,3\nl47",
+          "3,4\nl48",
+          "3,5\nl49",
+          "3,6\nl50",
+          "3,7\nl51",
+          "3,8\nl52",
+          "3,9\nl53",
+          "3,10\nl54",
+          "3,11\nl55",
+          {
+            "c": "#777777",
+            "w": 2.25
+          },
+          "3,13\n\n\n0,0\nl57",
+          {
+            "c": "#AAAAAA"
+          },
+          "4,15\nl58",
+          {
+            "x": 0.25,
+            "c": "#cccccc"
+          },
+          "3,12\n\n\n0,1\nl56"
+        ],
+        [
+          {
+            "c": "#AAAAAA",
+            "w": 1.25
+          },
+          "4,0\n\n\n1,1\n59",
+          {
+            "c": "#cccccc"
+          },
+          "5,3\n\n\n1,1\nl60",
+          {
+            "x": 0.25,
+            "c": "#AAAAAA",
+            "w": 2.25
+          },
+          "4,0\n\n\n1,0\nl59",
+          {
+            "c": "#cccccc"
+          },
+          "4,1\nl61",
+          "4,2\nl62",
+          "4,3\nl63",
+          "4,4\nl64",
+          "4,5\nl65",
+          "4,6\nl66",
+          "4,7\nl67",
+          "4,8\nl68",
+          "4,9\nl69",
+          "4,10\nl70",
+          {
+            "c": "#AAAAAA",
+            "w": 1.75
+          },
+          "4,13\nl71",
+          {
+            "c": "#777777"
+          },
+          "4,14\nl72",
+          {
+            "c": "#AAAAAA"
+          },
+          "0,13\nl73"
+        ],
+        [
+          {
+            "x": 2.5,
+            "w": 1.25
+          },
+          "5,0\nl74",
+          {
+            "w": 1.25
+          },
+          "5,1\nl75",
+          {
+            "w": 1.25
+          },
+          "5,2\nl76",
+          {
+            "w": 6.25
+          },
+          "5,5\nl77",
+          {
+            "w": 1.25
+          },
+          "5,9\nl78",
+          {
+            "w": 1.25
+          },
+          "5,10\nl79",
+          {
+            "x": 0.5,
+            "c": "#777777"
+          },
+          "5,13\nl80",
+          "5,14\nl81",
+          "5,15\nl82"
+        ]
+      ]
+    }
+  }
