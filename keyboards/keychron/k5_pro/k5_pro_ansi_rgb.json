@@ -1,0 +1,349 @@
+{
+  "name": "Keychron K5 Pro ANSI RGB",
+  "vendorId": "0x3434",
+  "productId": "0x0250",
+  "keycodes": ["qmk_lighting"],
+  "menus": [
+    {
+      "label": "Lighting",
+      "content": [
+        {
+          "label": "Backlight",
+          "content": [
+            {
+              "label": "Brightness",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
+            },
+            {
+              "label": "Effect",
+              "type": "dropdown",
+              "content": ["id_qmk_rgb_matrix_effect", 3, 2],
+              "options": [
+                ["None", 0],
+                ["Solid Color", 1],
+                ["Breathing", 2],
+                ["Band Spiral Val", 3],
+                ["Cycle All", 4],
+                ["Cycle Left Right", 5],
+                ["Cycle Up Down", 6],
+                ["Rainbow Moving Chevron", 7],
+                ["Cycle Out In", 8],
+                ["Cycle Out In Dual", 9],
+                ["Cycle Pinwheel", 10],
+                ["Cycle Spiral", 11],
+                ["Dual Beacon", 12],
+                ["Rainbow Beacon", 13],
+                ["Jellybean Raindrops", 14],
+                ["Pixel Rain", 15],
+                ["Typing Heatmap", 16],
+                ["Digital Rain", 17],
+                ["Reactive Simple", 18],
+                ["Reactive Multiwide", 19],
+                ["Reactive Multinexus", 20],
+                ["Splash", 21],
+                ["Solid Splash", 22],
+                ["Direct", 23]
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} > 1 && {id_qmk_rgb_matrix_effect} != 23",
+              "label": "Effect Speed",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 23 &&( {id_qmk_rgb_matrix_effect} < 4 || {id_qmk_rgb_matrix_effect} == 18 || ({id_qmk_rgb_matrix_effect} > 17 && {id_qmk_rgb_matrix_effect} != 21) ) ",
+              "label": "Color",
+              "type": "color",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} == 23",
+              "label": "Color Palette",
+              "type": "color-palette",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "customKeycodes": [
+    {"name": "Left Option", "title": "Left Option", "shortName": "LOpt"},
+    {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
+    {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},
+    {"name": "Right Cmd", "title": "Right Command", "shortName": "RCmd"},
+    {"name": "Task View", "title": "Task View in Windows", "shortName": "Task"},
+    {"name": "File Explorer", "title": "File Explorer in Windows", "shortName": "File"},
+    {"name": "Screen shot", "title": "Screenshot in macOS", "shortName": "SShot"},
+    {"name": "Cortana", "title": "Cortana in Windows", "shortName": "Cortana"},
+    {"name": "Siri", "title": "Siri in macOS", "shortName": "Siri"},
+    {"name": "Bluetooth Host 1", "title": "Bluetooth Host 1", "shortName": "BTH1"},
+    {"name": "Bluetooth Host 2", "title": "Bluetooth Host 2", "shortName": "BTH2"},
+    {"name": "Bluetooth Host 3", "title": "Bluetooth Host 3", "shortName": "BTH3"},
+    {"name": "Battery Level", "title": "Show battery level", "shortName": "Batt"}
+  ],
+  "matrix": {"rows": 6, "cols": 21},
+  "layouts": {
+    "keymap": [
+      [
+        {
+          "c": "#777777"
+        },
+        "0,0\nl0",
+        {
+          "x": 1,
+          "c": "#cccccc"
+        },
+        "0,1\nl1",
+        "0,2\nl2",
+        "0,3\nl3",
+        "0,4\nl4",
+        {
+          "x": 0.5,
+          "c": "#aaaaaa"
+        },
+        "0,5\nl5",
+        "0,6\nl6",
+        "0,7\nl7",
+        "0,8\nl8",
+        {
+          "x": 0.5,
+          "c": "#cccccc"
+        },
+        "0,9\nl9",
+        "0,10\nl10",
+        "0,11\nl11",
+        "0,12\nl12",
+        {
+          "x": 0.25,
+          "c": "#aaaaaa"
+        },
+        "0,14\nl13",
+        "0,15\nl14",
+        "0,16\nl15",
+        {
+          "x": 0.25,
+          "c": "#cccccc"
+        },
+        "0,17\nl16",
+        "0,18\nl17",
+        "0,19\nl18",
+        "0,20\nl19"
+      ],
+      [
+        {
+          "y": 0.25,
+          "c": "#aaaaaa"
+        },
+        "1,0\nl20",
+        {
+          "c": "#cccccc"
+        },
+        "1,1\nl21",
+        "1,2\nl22",
+        "1,3\nl23",
+        "1,4\nl24",
+        "1,5\nl25",
+        "1,6\nl26",
+        "1,7\nl27",
+        "1,8\nl28",
+        "1,9\nl29",
+        "1,10\nl30",
+        "1,11\nl31",
+        "1,12\nl32",
+        {
+          "w": 2,
+          "c": "#aaaaaa"
+        },
+        "1,13\nl33",
+        {
+          "x": 0.25
+        },
+        "1,14\nl34",
+        "1,15\nl35",
+        "1,16\nl36",
+        {
+          "x": 0.25,
+          "c": "#cccccc"
+        },
+        "1,17\nl37",
+        "1,18\nl38",
+        "1,19\nl39",
+        "1,20\nl40"
+      ],
+      [
+        {
+          "w": 1.5,
+          "c": "#aaaaaa"
+        },
+        "2,0\nl41",
+        {
+          "c": "#cccccc"
+        },
+        "2,1\nl42",
+        "2,2\nl43",
+        "2,3\nl44",
+        "2,4\nl45",
+        "2,5\nl46",
+        "2,6\nl47",
+        "2,7\nl48",
+        "2,8\nl49",
+        "2,9\nl50",
+        "2,10\nl51",
+        "2,11\nl52",
+        "2,12\nl53",
+        {
+          "w": 1.5,
+          "c": "#aaaaaa"
+        },
+        "2,13\nl54",
+        {
+          "x": 0.25
+        },
+        "2,14\nl55",
+        "2,15\nl56",
+        "2,16\nl57",
+        {
+          "x": 0.25,
+          "c": "#cccccc"
+        },
+        "2,17\nl58",
+        "2,18\nl59",
+        "2,19\nl60",
+        {
+          "h": 2
+        },
+        "2,20\nl61"
+      ],
+      [
+        {
+          "w": 1.75,
+          "c": "#aaaaaa"
+        },
+        "3,0\nl62",
+        {
+          "c": "#cccccc"
+        },
+        "3,1\nl63",
+        "3,2\nl64",
+        "3,3\nl65",
+        "3,4\nl66",
+        "3,5\nl67",
+        "3,6\nl68",
+        "3,7\nl69",
+        "3,8\nl70",
+        "3,9\nl71",
+        "3,10\nl72",
+        "3,11\nl73",
+        {
+          "w": 2.25,
+          "c": "#777777"
+        },
+        "3,13\nl74",
+        {
+          "x": 3.5,
+          "c": "#cccccc"
+        },
+        "3,17\nl75",
+        "3,18\nl76",
+        "3,19\nl77"
+      ],
+      [
+        {
+          "w": 2.25,
+          "c": "#aaaaaa"
+        },
+        "4,0\nl78",
+        {
+          "c": "#cccccc"
+        },
+        "4,2\nl79",
+        "4,3\nl80",
+        "4,4\nl81",
+        "4,5\nl82",
+        "4,6\nl83",
+        "4,7\nl84",
+        "4,8\nl85",
+        "4,9\nl86",
+        "4,10\nl87",
+        "4,11\nl88",
+        {
+          "w": 2.75,
+          "c": "#aaaaaa"
+        },
+        "4,13\nl89",
+        {
+          "x": 1.25,
+          "c": "#777777"
+        },
+        "4,15\nl90",
+        {
+          "x": 1.25,
+          "c": "#cccccc"
+        },
+        "4,17\nl91",
+        "4,18\nl92",
+        "4,19\nl93",
+        {
+          "h": 2
+        },
+        "4,20\nl94"
+      ],
+      [
+        {
+          "w": 1.25,
+          "c": "#aaaaaa"
+        },
+        "5,0\nl95",
+        {
+          "w": 1.25
+        },
+        "5,1\nl96",
+        {
+          "w": 1.25
+        },
+        "5,2\nl97",
+        {
+          "w": 6.25,
+          "c": "#cccccc"
+        },
+        "5,6\nl98",
+        {
+          "w": 1.25,
+          "c": "#aaaaaa"
+        },
+        "5,10\nl99",
+        {
+          "w": 1.25
+        },
+        "5,11\nl100",
+        {
+          "w": 1.25
+        },
+        "5,12\nl101",
+        {
+          "w": 1.25
+        },
+        "5,13\nl102",
+        {
+          "x": 0.25,
+          "c": "#777777"
+        },
+        "5,14\nl103",
+        "5,15\nl104",
+        "5,16\nl105",
+        {
+          "x": 0.25,
+          "w": 2,
+          "c": "#cccccc"
+        },
+        "5,17\nl106",
+        "5,19\nl107"
+      ]
+    ]
+  }
+}
