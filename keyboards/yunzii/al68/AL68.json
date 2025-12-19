@@ -1,0 +1,92 @@
+{
+  "name": "AL68 Keyboard",
+  "vendorId": "0x414A",
+  "productId": "0x304E",
+  "matrix": {"rows": 6, "cols": 15},
+  
+  "layouts":{
+    
+    "keymap":[
+      ["0,0\nl54","0,1\nl55","0,2\nl56","0,3\nl57", "0,4\nl58","0,5\nl59","0,6\nl60","0,7\nl61","0,8\nl62","0,9\nl63","0,10\nl64","0,11\nl65","0,12\nl66",{"w":2.0},"0,13\nl67","4,3\nl68"],
+      [{"w":1.5},"1,0\nl53","1,1\nl52","1,2\nl51","1,3\nl50", "1,4\nl49","1,5\nl48","1,6\nl47","1,7\nl46","1,8\nl45","1,9\nl44","1,10\nl43","1,11\nl42","1,12\nl41",{"w":1.5},"1,13\nl40","1,14\nl39"],
+      [{"w":1.75},"2,0\nl25","2,1\nl26","2,2\nl27","2,3\nl28", "2,4\nl29","2,5\nl30","2,6\nl31","2,7\nl32","2,8\nl33","2,9\nl34","2,10\nl35","2,11\nl36",{"w":2.25},"2,13\nl37","2,14\nl38"],
+      [{"w":2.25},"3,0\nl24","3,2\nl20","3,3\nl19","3,4\nl18", "3,5\nl17","3,6\nl16","3,7\nl15","3,8\nl14","3,9\nl13","3,10\nl12","3,11\nl11",{"w":1.75},"3,12\nl10","3,13\nl9","3,14\nl8"],
+      [{"w":1.25},"4,0\nl23",{"w":1.25},"4,1\nl22",{"w":1.25},"4,2\nl21",{"w":6.25},"4,5\nl0",{"w":1.25}, "4,10\nl1",{"w":1.25},"4,11\nl2",{"x":0.5},"4,12\nl5","4,13\nl6","4,14\nl7"],
+      ["5,11.75\nl3", "5,12.75\nl4"]
+    ]
+  },
+  "keycodes": ["qmk_lighting"],
+  "customKeycodes": [
+    {"name": "KC_USB", "title": "USB MODE", "shortName": "USB"}
+    ],
+      "menus": [
+        {
+          "label": "Lighting",
+          "content": [
+            {
+              "label": "Backlight",
+              "content": [
+                {
+                  "label": "Brightness",
+                  "type": "range",
+                  "options": [0, 255],
+                  "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
+                },
+                {
+                  "label": "Effect",
+                  "type": "dropdown",
+                  "content": ["id_qmk_rgb_matrix_effect", 3, 2],
+                  "options": [
+                    "All Off",
+                    "Solid Color",
+                    "Gradient Up/Down",
+                    "Gradient Left/Right",
+                    "Breathing",
+                    "Band Sat.",
+                    "Band Val.",
+                    "Pinwheel Sat.",
+                    "Pinwheel Val.",
+                    "Spiral Sat.",
+                    "Spiral Val.",
+                    "Cycle All",
+                    "Cycle Left/Right",
+                    "Cycle Up/Down",
+                    "Cycle Out/In",
+                    "Cycle Out/In Dual",
+                    "Rainbow Moving Chevron",
+                    "Cycle Pinwheel",
+                    "Cycle Spiral",
+                    "Dual Beacon",
+                    "Rainbow Beacon",
+                    "Rainbow Pinwheels",
+                    "Hue Breathing",
+                    "Hue Pendulum",
+                    "Hue Wave",
+                    "Direct"
+                  ]
+                },
+                {
+                  "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 25",
+                  "label": "Effect Speed",
+                  "type": "range",
+                  "options": [0, 255],
+                  "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+                },
+                {
+                  "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 24 && {id_qmk_rgb_matrix_effect} != 25 && {id_qmk_rgb_matrix_effect} != 28 && {id_qmk_rgb_matrix_effect} != 29 && {id_qmk_rgb_matrix_effect} != 32",
+                  "label": "Color",
+                  "type": "color",
+                  "content": ["id_qmk_rgb_matrix_color", 3, 4]
+                },
+                {
+                  "showIf": "{id_qmk_rgb_matrix_effect} == 25",
+                  "label": "Color Palette",
+                  "type": "color-palette",
+                  "content": ["id_qmk_rgb_matrix_color", 3, 4]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+  }
