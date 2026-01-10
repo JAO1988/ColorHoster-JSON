@@ -1,0 +1,440 @@
+{
+  "name": "Keychron V3 ISO Knob",
+  "vendorId": "0x3434",
+  "productId": "0x0333",
+  "matrix": {
+    "rows": 6,
+    "cols": 16
+  },
+  "customKeycodes": [
+    {
+      "name": "Mission Control",
+      "title": "Mission Control in macOS",
+      "shortName": "MCtrl"
+    },
+    {
+      "name": "Launch Pad",
+      "title": "Launch Pad in macOS",
+      "shortName": "LPad"
+    },
+    {
+      "name": "Left Option",
+      "title": "Left Option in macOS",
+      "shortName": "LOpt"
+    },
+    {
+      "name": "Right Option",
+      "title": "Right Option in macOS",
+      "shortName": "ROpt"
+    },
+    {
+      "name": "Left Cmd",
+      "title": "Left Command in macOS",
+      "shortName": "LCmd"
+    },
+    {
+      "name": "Right Cmd",
+      "title": "Right Command in macOS",
+      "shortName": "RCmd"
+    },
+    {
+      "name": "Siri",
+      "title": "Siri in macOS",
+      "shortName": "Siri"
+    },
+    {
+      "name": "Task View",
+      "title": "Task View in windows",
+      "shortName": "Task"
+    },
+    {
+      "name": "File Explorer",
+      "title": "File Explorer in windows",
+      "shortName": "File"
+    },
+    {
+      "name": "Screen Shot",
+      "title": "Screenshot in macOS",
+      "shortName": "SShot"
+    },
+    {
+      "name": "Cortana",
+      "title": "Cortana in windows",
+      "shortName": "Cortana"
+    }
+  ],
+  "keycodes": [
+    "qmk_lighting"
+  ],
+  "menus": [
+    {
+      "label": "Lighting",
+      "content": [
+        {
+          "label": "Backlight",
+          "content": [
+            {
+              "label": "Brightness",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_qmk_rgb_matrix_brightness",
+                3,
+                1
+              ]
+            },
+            {
+              "label": "Effect",
+              "type": "dropdown",
+              "content": [
+                "id_qmk_rgb_matrix_effect",
+                3,
+                2
+              ],
+              "options": [
+                [
+                  "00. None",
+                  0
+                ],
+                [
+                  "01. SOLID_COLOR",
+                  1
+                ],
+                [
+                  "02. BREATHING",
+                  2
+                ],
+                [
+                  "03. BAND_SPIRAL_VAL",
+                  3
+                ],
+                [
+                  "04. CYCLE_ALL",
+                  4
+                ],
+                [
+                  "05. CYCLE_LEFT_RIGHT",
+                  5
+                ],
+                [
+                  "06. CYCLE_UP_DOWN",
+                  6
+                ],
+                [
+                  "07. RAINBOW_MOVING_CHEVRON",
+                  7
+                ],
+                [
+                  "08. CYCLE_OUT_IN",
+                  8
+                ],
+                [
+                  "09. CYCLE_OUT_IN_DUAL",
+                  9
+                ],
+                [
+                  "10. CYCLE_PINWHEEL",
+                  10
+                ],
+                [
+                  "11. CYCLE_SPIRAL",
+                  11
+                ],
+                [
+                  "12. DUAL_BEACON",
+                  12
+                ],
+                [
+                  "13. RAINBOW_BEACON",
+                  13
+                ],
+                [
+                  "14. JELLYBEAN_RAINDROPS",
+                  14
+                ],
+                [
+                  "15. PIXEL_RAIN",
+                  15
+                ],
+                [
+                  "16. TYPING_HEATMAP",
+                  16
+                ],
+                [
+                  "17. DIGITAL_RAIN",
+                  17
+                ],
+                [
+                  "18. REACTIVE_SIMPLE",
+                  18
+                ],
+                [
+                  "19. REACTIVE_MULTIWIDE",
+                  19
+                ],
+                [
+                  "20. REACTIVE_MULTINEXUS",
+                  20
+                ],
+                [
+                  "21. SPLASH",
+                  21
+                ],
+                [
+                  "22. SOLID_SPLASH",
+                  22
+                ],
+                [
+                  "Direct",
+                  23
+                ]
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} > 1 && {id_qmk_rgb_matrix_effect} != 23",
+              "label": "Effect Speed",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_qmk_rgb_matrix_effect_speed",
+                3,
+                3
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 23",
+              "label": "Color",
+              "type": "color",
+              "content": [
+                "id_qmk_rgb_matrix_color",
+                3,
+                4
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} == 23",
+              "label": "Color Palette",
+              "type": "color-palette",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layouts": {
+    "keymap": [
+      [
+        {
+          "c": "#777777"
+        },
+        "0,0\nl0\nESC",
+        {
+          "x": 0.25,
+          "c": "#cccccc"
+        },
+        "0,1\nl1",
+        "0,2\nl2",
+        "0,3\nl3",
+        "0,4\nl4",
+        {
+          "x": 0.25,
+          "c": "#aaaaaa"
+        },
+        "0,5\nl5",
+        "0,6\nl6",
+        "0,7\nl7",
+        "0,8\nl8",
+        {
+          "x": 0.25,
+          "c": "#cccccc"
+        },
+        "0,9\nl9",
+        "0,10\nl10",
+        "0,11\nl11",
+        "0,12\nl12",
+        {
+          "x": 0.25
+        },
+        "0,13\nl13\n\n\n\n\n\n\n\n\ne0",
+        {
+          "x": 0.25,
+          "c": "#aaaaaa"
+        },
+        "0,14\nl14",
+        "0,15\nl15",
+        "3,14\nl16"
+      ],
+      [
+        {
+          "y": 0.25,
+          "c": "#cccccc"
+        },
+        "1,0\nl17",
+        "1,1\nl18",
+        "1,2\nl19",
+        "1,3\nl20",
+        "1,4\nl21",
+        "1,5\nl22",
+        "1,6\nl23",
+        "1,7\nl24",
+        "1,8\nl25",
+        "1,9\nl26",
+        "1,10\nl27",
+        "1,11\nl28",
+        "1,12\nl29",
+        {
+          "c": "#aaaaaa",
+          "w": 2
+        },
+        "1,13\nl30",
+        {
+          "x": 0.25
+        },
+        "1,14\nl31",
+        "1,15\nl32",
+        "3,15\nl33"
+      ],
+      [
+        {
+          "w": 1.5
+        },
+        "2,0\nl34",
+        {
+          "c": "#cccccc"
+        },
+        "2,1\nl35",
+        "2,2\nl36",
+        "2,3\nl37",
+        "2,4\nl38",
+        "2,5\nl39",
+        "2,6\nl40",
+        "2,7\nl41",
+        "2,8\nl42",
+        "2,9\nl43",
+        "2,10\nl44",
+        "2,11\nl45",
+        "2,12\nl46",
+        {
+          "x": 0.25,
+          "c": "#777777",
+          "w": 1.25,
+          "h": 2,
+          "w2": 1.5,
+          "h2": 1,
+          "x2": -0.25
+        },
+        "2,13\nl47",
+        {
+          "x": 0.25,
+          "c": "#aaaaaa"
+        },
+        "2,14\nl48",
+        "2,15\nl49",
+        "3,12\nl50"
+      ],
+      [
+        {
+          "w": 1.75
+        },
+        "3,0\nl51",
+        {
+          "c": "#cccccc"
+        },
+        "3,1\nl52",
+        "3,2\nl53",
+        "3,3\nl54",
+        "3,4\nl55",
+        "3,5\nl56",
+        "3,6\nl57",
+        "3,7\nl58",
+        "3,8\nl59",
+        "3,9\nl60",
+        "3,10\nl61",
+        "3,11\nl62",
+        "3,13\nl63"
+      ],
+      [
+        {
+          "c": "#aaaaaa",
+          "w": 1.25
+        },
+        "4,0\nl64",
+        "4,1\nl65",
+        {
+          "c": "#cccccc"
+        },
+        "4,2\nl66",
+        "4,3\nl67",
+        "4,4\nl68",
+        "4,5\nl69",
+        "4,6\nl70",
+        "4,7\nl71",
+        "4,8\nl72",
+        "4,9\nl73",
+        "4,10\nl74",
+        "4,11\nl75",
+        {
+          "c": "#aaaaaa",
+          "w": 2.75
+        },
+        "4,13\nl76",
+        {
+          "x": 1.25,
+          "c": "#777777"
+        },
+        "4,15\nl77"
+      ],
+      [
+        {
+          "c": "#aaaaaa",
+          "w": 1.25
+        },
+        "5,0\nl78",
+        {
+          "w": 1.25
+        },
+        "5,1\nl79",
+        {
+          "w": 1.25
+        },
+        "5,2\nl80",
+        {
+          "c": "#cccccc",
+          "w": 6.25
+        },
+        "5,6\nl81",
+        {
+          "c": "#aaaaaa",
+          "w": 1.25
+        },
+        "5,10\nl82",
+        {
+          "w": 1.25
+        },
+        "5,11\nl83",
+        {
+          "w": 1.25
+        },
+        "5,12\nl84",
+        {
+          "w": 1.25
+        },
+        "5,13\nl85",
+        {
+          "x": 0.25,
+          "c": "#777777"
+        },
+        "5,14\nl86",
+        "5,15\nl87",
+        "4,14\nl88"
+      ]
+    ]
+  }
+}
