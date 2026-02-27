@@ -1,5 +1,5 @@
 {
-  "name": "M1 V5 VIA",
+  "name": "MonsGeek Keyboard",
   "vendorId": "0x342d",
   "productId": "0xe4c5",
   "keycodes": ["qmk_lighting"],
@@ -67,13 +67,7 @@
                 ["Solid Splash", 43],
                 ["Solid Multisplash", 44],
                 ["Direct", 45],
-                ["Flower Blooming", 46],
-                ["Digital Rain", 47],
-                ["Starlight", 48],
-                ["Starlight Smooth", 49],
-                ["Starlight Duel Hue", 50],
-                ["Starlight Dual Sat", 51],
-                ["Riverflow", 52]
+                ["Close All", 46]
               ]
             },
             {
@@ -84,7 +78,7 @@
               "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
             },
             {
-              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 24 && {id_qmk_rgb_matrix_effect} != 28 && {id_qmk_rgb_matrix_effect} != 29 && {id_qmk_rgb_matrix_effect} != 32 && {id_qmk_rgb_matrix_effect} != 45",
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 45 && {id_qmk_rgb_matrix_effect} != 24 && {id_qmk_rgb_matrix_effect} != 28 && {id_qmk_rgb_matrix_effect} != 29 && {id_qmk_rgb_matrix_effect} != 32",
               "label": "Color",
               "type": "color",
               "content": ["id_qmk_rgb_matrix_color", 3, 4]
@@ -146,7 +140,7 @@
           {
             "x": 0.5
           },
-          "0,14\n\n\n\n\n\n\n\n\ne0"
+          "0,14\nl82\n\n\n\n\n\n\n\n\ne0"
         ],
         [
           {
@@ -194,7 +188,7 @@
           {
             "w": 1.75
           },
-          "2,13\nl38",
+          "2,13\nl48",
           {
             "x": 0.5
           },
