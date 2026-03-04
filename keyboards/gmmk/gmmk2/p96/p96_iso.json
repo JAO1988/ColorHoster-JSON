@@ -1,0 +1,576 @@
+{
+  "name": "GMMK2 96% ISO",
+  "vendorId": "0x320F",
+  "productId": "0x505A",
+  "keycodes": [
+    "qmk_lighting"
+  ],
+  "menus": [
+    {
+      "label": "Lighting",
+      "content": [
+        {
+          "label": "Backlight",
+          "content": [
+            {
+              "label": "Brightness",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_qmk_rgb_matrix_brightness",
+                3,
+                1
+              ]
+            },
+            {
+              "label": "Effect",
+              "type": "dropdown",
+              "content": [
+                "id_qmk_rgb_matrix_effect",
+                3,
+                2
+              ],
+              "options": [
+                [
+                  "None",
+                  0
+                ],
+                [
+                  "Solid Color",
+                  1
+                ],
+                [
+                  "Alphas Mods",
+                  2
+                ],
+                [
+                  "Gradient Up Down",
+                  3
+                ],
+                [
+                  "Gradient Left Right",
+                  4
+                ],
+                [
+                  "Breathing",
+                  5
+                ],
+                [
+                  "Band Sat",
+                  6
+                ],
+                [
+                  "Band Val",
+                  7
+                ],
+                [
+                  "Band Pinwheel Sat",
+                  8
+                ],
+                [
+                  "Band Pinwheel Val",
+                  9
+                ],
+                [
+                  "Band Spiral Sat",
+                  10
+                ],
+                [
+                  "Band Spiral Val",
+                  11
+                ],
+                [
+                  "Cycle All",
+                  12
+                ],
+                [
+                  "Cycle Left Right",
+                  13
+                ],
+                [
+                  "Cycle Up Down",
+                  14
+                ],
+                [
+                  "Rainbow Moving Chevron",
+                  15
+                ],
+                [
+                  "Cycle Out In",
+                  16
+                ],
+                [
+                  "Cycle Out In Dual",
+                  17
+                ],
+                [
+                  "Cycle Pinwheel",
+                  18
+                ],
+                [
+                  "Cycle Spiral",
+                  19
+                ],
+                [
+                  "Dual Beacon",
+                  20
+                ],
+                [
+                  "Rainbow Beacon",
+                  21
+                ],
+                [
+                  "Rainbow Pinwheels",
+                  22
+                ],
+                [
+                  "Raindrops",
+                  23
+                ],
+                [
+                  "Jellybean Raindrops",
+                  24
+                ],
+                [
+                  "Hue Breathing",
+                  25
+                ],
+                [
+                  "Hue Pendulum",
+                  26
+                ],
+                [
+                  "Hue Wave",
+                  27
+                ],
+                [
+                  "Pixel Rain",
+                  28
+                ],
+                [
+                  "Pixel Flow",
+                  29
+                ],
+                [
+                  "Pixel Fractal",
+                  30
+                ],
+                [
+                  "Typing Heatmap",
+                  31
+                ],
+                [
+                  "Digital Rain",
+                  32
+                ],
+                [
+                  "Reactive Simple",
+                  33
+                ],
+                [
+                  "Reactive",
+                  34
+                ],
+                [
+                  "Reactive Wide",
+                  35
+                ],
+                [
+                  "Reactive Multiwide",
+                  36
+                ],
+                [
+                  "Reactive Cross",
+                  37
+                ],
+                [
+                  "Reactive Multicross",
+                  38
+                ],
+                [
+                  "Reactive Nexus",
+                  39
+                ],
+                [
+                  "Reactive Multinexus",
+                  40
+                ],
+                [
+                  "Splash",
+                  41
+                ],
+                [
+                  "Multisplash",
+                  42
+                ],
+                [
+                  "Solid Splash",
+                  43
+                ],
+                [
+                  "Solid Multisplash",
+                  44
+                ],
+                [
+                  "Direct",
+                  45
+                ]
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} > 1 && {id_qmk_rgb_matrix_effect} != 45",
+              "label": "Effect Speed",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_qmk_rgb_matrix_effect_speed",
+                3,
+                3
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 45 && ({id_qmk_rgb_matrix_effect} == 1 || {id_qmk_rgb_matrix_effect} == 5 || {id_qmk_rgb_matrix_effect} >= 33)",
+              "label": "Color",
+              "type": "color",
+              "content": [
+                "id_qmk_rgb_matrix_color",
+                3,
+                4
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} == 45",
+              "label": "Color Palette",
+              "type": "color-palette",
+              "content": [
+                "id_qmk_rgb_matrix_color",
+                3,
+                4
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "matrix": {
+    "rows": 17,
+    "cols": 8
+  },
+  "layouts": {
+    "keymap": [
+      [
+        {
+          "c": "#777777"
+        },
+        "0,0\nl0",
+        {
+          "x": 0.25,
+          "c": "#cccccc"
+        },
+        "1,0\nl1",
+        "2,0\nl2",
+        "3,0\nl3",
+        "4,0\nl4",
+        {
+          "x": 0.25
+        },
+        "5,0\nl5",
+        "6,0\nl6",
+        "7,0\nl7",
+        "8,0\nl8",
+        {
+          "x": 0.25
+        },
+        "9,0\nl9",
+        "10,0\nl10",
+        "11,0\nl11",
+        "12,0\nl12",
+        {
+          "x": 0.25
+        },
+        "13,0\nl13",
+        {
+          "x": 0.25,
+          "c": "#aaaaaa"
+        },
+        "0,6\nl14",
+        "1,6\nl15",
+        "2,6\nl16",
+        "3,6\nl17"
+      ],
+      [
+        {
+          "y": 0.1,
+          "c": "#cccccc"
+        },
+        "0,1\nl18",
+        "1,1\nl19",
+        "2,1\nl20",
+        "3,1\nl21",
+        "4,1\nl22",
+        "5,1\nl23",
+        "6,1\nl24",
+        "7,1\nl25",
+        "8,1\nl26",
+        "9,1\nl27",
+        "10,1\nl28",
+        "11,1\nl29",
+        "12,1\nl30",
+        {
+          "c": "#aaaaaa",
+          "w": 2
+        },
+        "13,1\nl31",
+        {
+          "x": 0.25,
+          "c": "#cccccc"
+        },
+        "4,6\nl32",
+        "5,6\nl33",
+        "6,6\nl34",
+        "7,6\nl35"
+      ],
+      [
+        {
+          "c": "#aaaaaa",
+          "w": 1.5
+        },
+        "0,2\nl36",
+        {
+          "c": "#cccccc"
+        },
+        "1,2\nl37",
+        "2,2\nl38",
+        "3,2\nl39",
+        "4,2\nl40",
+        "5,2\nl41",
+        "6,2\nl42",
+        "7,2\nl43",
+        "8,2\nl44",
+        "9,2\nl45",
+        "10,2\nl46",
+        "11,2\nl47",
+        "12,2\nl48",
+        {
+          "x": 0.25,
+          "c": "#777777",
+          "w": 1.25,
+          "h": 2,
+          "w2": 1.5,
+          "h2": 1,
+          "x2": -0.25
+        },
+        "13,3\nl49",
+        {
+          "x": 0.25,
+          "c": "#cccccc"
+        },
+        "8,6\nl50",
+        "9,6\nl51",
+        "10,6\nl52",
+        {
+          "c": "#aaaaaa",
+          "h": 2
+        },
+        "11,6\nl53"
+      ],
+      [
+        {
+          "w": 1.75
+        },
+        "0,3\nl54",
+        {
+          "c": "#cccccc"
+        },
+        "1,3\nl55",
+        "2,3\nl56",
+        "3,3\nl57",
+        "4,3\nl58",
+        "5,3\nl59",
+        "6,3\nl60",
+        "7,3\nl61",
+        "8,3\nl62",
+        "9,3\nl63",
+        "10,3\nl64",
+        "11,3\nl65",
+        "12,3\nl66",
+        {
+          "x": 1.5
+        },
+        "10,7\nl67",
+        "11,7\nl68",
+        "12,7\nl69"
+      ],
+      [
+        {
+          "c": "#aaaaaa",
+          "w": 1.25
+        },
+        "0,4\nl70",
+        {
+          "c": "#cccccc"
+        },
+        "1,4\nl71",
+        "2,4\nl72",
+        "3,4\nl73",
+        "4,4\nl74",
+        "5,4\nl75",
+        "6,4\nl76",
+        "7,4\nl77",
+        "8,4\nl78",
+        "9,4\nl79",
+        "10,4\nl80",
+        "11,4\nl81",
+        {
+          "c": "#aaaaaa",
+          "w": 1.75
+        },
+        "13,4\nl82",
+        {
+          "x": 1.25,
+          "c": "#cccccc"
+        },
+        "6,7\nl84",
+        "7,7\nl85",
+        "8,7\nl86",
+        {
+          "c": "#aaaaaa",
+          "h": 2
+        },
+        "9,7\nl87"
+      ],
+      [
+        {
+          "y": -0.9,
+          "x": 14.125,
+          "c": "#777777"
+        },
+        "1,7\nl83"
+      ],
+      [
+        {
+          "y": -0.1,
+          "c": "#aaaaaa",
+          "w": 1.25
+        },
+        "0,5\nl88",
+        {
+          "w": 1.25
+        },
+        "1,5\nl89",
+        {
+          "w": 1.25
+        },
+        "2,5\nl90",
+        {
+          "c": "#cccccc",
+          "w": 6.25
+        },
+        "6,5\nl91",
+        {
+          "c": "#aaaaaa"
+        },
+        "9,5\nl92",
+        "10,5\nl93",
+        "12,5\nl94",
+        {
+          "x": 3.25,
+          "c": "#cccccc"
+        },
+        "4,7\nl98",
+        "5,7\nl99"
+      ],
+      [
+        {
+          "y": -0.9,
+          "x": 13.125,
+          "c": "#777777"
+        },
+        "0,7\nl95",
+        "2,7\nl96",
+        "3,7\nl97"
+      ],
+      [
+        {
+          "y": 0.05,
+          "c": "#cccccc"
+        },
+        "14,0\nl100",
+        {
+          "x": 17.25
+        },
+        "15,2\nl110"
+      ],
+      [
+        "14,1\nl101",
+        {
+          "x": 17.25
+        },
+        "15,3\nl111"
+      ],
+      [
+        "14,2\nl102",
+        {
+          "x": 17.25
+        },
+        "15,4\nl112"
+      ],
+      [
+        "14,3\nl103",
+        {
+          "x": 17.25
+        },
+        "15,5\nl113"
+      ],
+      [
+        "14,4\nl104",
+        {
+          "x": 17.25
+        },
+        "15,6\nl114"
+      ],
+      [
+        "14,5\nl105",
+        {
+          "x": 17.25
+        },
+        "15,7\nl115"
+      ],
+      [
+        "14,6\nl106",
+        {
+          "x": 17.25
+        },
+        "16,0\nl116"
+      ],
+      [
+        "14,7\nl107",
+        {
+          "x": 17.25
+        },
+        "16,1\nl117"
+      ],
+      [
+        "15,0\nl108",
+        {
+          "x": 17.25
+        },
+        "16,2\nl118"
+      ],
+      [
+        "15,1\nl109",
+        {
+          "x": 17.25
+        },
+        "16,3\nl119"
+      ]
+    ]
+  }
+}
