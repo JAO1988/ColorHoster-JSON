@@ -44,24 +44,26 @@
                 ["Reactive Multinexus", 20],
                 ["Splash", 21],
                 ["Solid Splash", 22],
-                ["Direct", 23]
+                ["Per Key RGB", 23],
+                ["Direct", 24],
+                ["Mix RGB", 25]
               ]
             },
             {
-              "showIf": "{id_qmk_rgb_matrix_effect} > 1 && {id_qmk_rgb_matrix_effect} != 23",
+              "showIf": "{id_qmk_rgb_matrix_effect} > 1 && {id_qmk_rgb_matrix_effect} != 23 && {id_qmk_rgb_matrix_effect} != 24",
               "label": "Effect Speed",
               "type": "range",
               "options": [0, 255],
               "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
             },
             {
-              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 23 && ( {id_qmk_rgb_matrix_effect} < 4 || {id_qmk_rgb_matrix_effect} == 18 || ({id_qmk_rgb_matrix_effect} > 17 && {id_qmk_rgb_matrix_effect} != 21) ) ",
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 24 && ( {id_qmk_rgb_matrix_effect} < 4 || {id_qmk_rgb_matrix_effect} == 18 || ({id_qmk_rgb_matrix_effect} > 17 && {id_qmk_rgb_matrix_effect} != 21) ) ",
               "label": "Color",
               "type": "color",
               "content": ["id_qmk_rgb_matrix_color", 3, 4]
             },
             {
-              "showIf": "{id_qmk_rgb_matrix_effect} == 23",
+              "showIf": "{id_qmk_rgb_matrix_effect} == 24",
               "label": "Color Palette",
               "type": "color-palette",
               "content": ["id_qmk_rgb_matrix_color", 3, 4]
@@ -77,7 +79,7 @@
     {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},
     {"name": "Right Cmd", "title": "Right Command", "shortName": "RCmd"},
     {"name": "Misson Control", "title": "Misson Control in macOS", "shortName": "MCtl"},
-    {"name": "Lanuch Pad", "title": "Lanuch Pad in macOS", "shortName": "LPad"},
+    {"name": "Launch pad", "title": "Launch pad in macOS", "shortName": "LPad"},
     {"name": "Task View", "title": "Task View in Windows", "shortName": "Task"},
     {"name": "File Explorer", "title": "File Explorer in Windows", "shortName": "File"},
     {"name": "Screen shot", "title": "Screenshot in macOS", "shortName": "SShot"},
