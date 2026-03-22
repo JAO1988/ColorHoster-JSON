@@ -1,0 +1,200 @@
+{
+    "name": "DesignedbyGG Berserker",
+    "vendorId": "0x320F",
+    "productId": "0x5042",
+    "keycodes": ["qmk_lighting"],
+    "menus": [
+        {
+            "label": "Lighting",
+            "content": [
+                {
+                    "label": "Backlight",
+                    "content": [
+                        {
+                            "label": "Brightness",
+                            "type": "range",
+                            "options": [0, 255],
+                            "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
+                        },
+                        {
+                            "label": "Effect",
+                            "type": "dropdown",
+                            "content": ["id_qmk_rgb_matrix_effect", 3, 2],
+                            "options": [
+                                ["All Off", 0],
+                                ["SOLID_COLOR", 1],
+                                ["BREATHING", 2],
+                                ["TYPING_HEATMAP", 3],
+                                ["SOLID_REACTIVE_SIMPLE", 4],
+                                ["SOLID_REACTIVE", 5],
+                                ["SOLID_REACTIVE_WIDE", 6],
+                                ["SOLID_REACTIVE_MULTIWIDE", 7],
+                                ["SOLID_REACTIVE_CROSS", 8],
+                                ["SOLID_REACTIVE_MULTICROSS", 9],
+                                ["SOLID_REACTIVE_NEXUS", 10],
+                                ["SOLID_REACTIVE_MULTINEXUS", 11],
+                                ["SPLASH", 12],
+                                ["SOLID_SPLASH", 13],
+                                ["SOLID_MULTISPLASH", 14],
+                                ["Direct", 15]
+                            ]
+                        },
+                        {
+                            "showIf": "{id_qmk_rgb_matrix_effect} > 1 && {id_qmk_rgb_matrix_effect} != 15",
+                            "label": "Effect Speed",
+                            "type": "range",
+                            "options": [0, 255],
+                            "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+                        },
+                        {
+                            "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 15",
+                            "label": "Color",
+                            "type": "color",
+                            "content": ["id_qmk_rgb_matrix_color", 3, 4]
+                        },
+                        {
+                            "showIf": "{id_qmk_rgb_matrix_effect} == 15",
+                            "label": "Color Palette",
+                            "type": "color-palette",
+                            "content": ["id_qmk_rgb_matrix_color", 3, 4]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "matrix": {"rows": 6, "cols": 17},
+    "layouts": {
+        "keymap": [
+            [
+                {"c": "#777777"},
+                "0,0\nl0",
+                {"x": 1, "c": "#cccccc"},
+                "0,2\nl1",
+                "0,3\nl2",
+                "0,4\nl3",
+                "0,5\nl4",
+                {"x": 0.5},
+                "0,6\nl5",
+                "0,7\nl6",
+                "0,8\nl7",
+                "0,9\nl8",
+                {"x": 0.5},
+                "0,10\nl9",
+                "0,11\nl10",
+                "0,12\nl11",
+                "0,13\nl12",
+                {"x": 0.25},
+                "0,14\nl13",
+                "0,15\nl14",
+                "0,16\nl15"
+            ],
+            [
+                {"y": 0.5},
+                "1,0\nl16",
+                "1,1\nl17",
+                "1,2\nl18",
+                "1,3\nl19",
+                "1,4\nl20",
+                "1,5\nl21",
+                "1,6\nl22",
+                "1,7\nl23",
+                "1,8\nl24",
+                "1,9\nl25",
+                "1,10\nl26",
+                "1,11\nl27",
+                "1,12\nl28",
+                {"c": "#aaaaaa", "w": 2},
+                "1,13\nl29",
+                {"x": 0.25, "c": "#cccccc"},
+                "1,14\nl30",
+                "1,15\nl31",
+                "1,16\nl32"
+            ],
+            [
+                {"x": -1},
+                "0,1\n\n\n\n\n\n\n\n\ne0",
+                {"c": "#aaaaaa", "w": 1.5},
+                "2,0\nl33",
+                {"c": "#cccccc"},
+                "2,1\nl34",
+                "2,2\nl35",
+                "2,3\nl36",
+                "2,4\nl37",
+                "2,5\nl38",
+                "2,6\nl39",
+                "2,7\nl40",
+                "2,8\nl41",
+                "2,9\nl42",
+                "2,10\nl43",
+                "2,11\nl44",
+                "2,12\nl45",
+                {"x": 0.25, "c": "#777777", "w": 1.25, "h": 2, "w2": 1.5, "h2": 1, "x2": -0.25},
+                "3,13\nl62",
+                {"x": 0.25, "c": "#cccccc"},
+                "2,14\nl46",
+                "2,15\nl47",
+                "2,16\nl48"
+            ],
+            [
+                {"c": "#aaaaaa", "w": 1.75},
+                "3,0\nl49",
+                {"c": "#cccccc"},
+                "3,1\nl50",
+                "3,2\nl51",
+                "3,3\nl52",
+                "3,4\nl53",
+                "3,5\nl54",
+                "3,6\nl55",
+                "3,7\nl56",
+                "3,8\nl57",
+                "3,9\nl58",
+                "3,10\nl59",
+                "3,11\nl60",
+                "3,12\nl61"
+            ],
+            [
+                {"c": "#aaaaaa", "w": 1.25},
+                "4,0\nl63",
+                {"c": "#cccccc"},
+                "4,1\nl64",
+                "4,2\nl65",
+                "4,3\nl66",
+                "4,4\nl67",
+                "4,5\nl68",
+                "4,6\nl69",
+                "4,7\nl70",
+                "4,8\nl71",
+                "4,9\nl72",
+                "4,10\nl73",
+                "4,11\nl74",
+                {"c": "#aaaaaa", "w": 2.75},
+                "4,13\nl75",
+                {"x": 1.25, "c": "#cccccc"},
+                "4,15\nl76"
+            ],
+            [
+                {"c": "#aaaaaa", "w": 1.25},
+                "5,0\nl77",
+                {"w": 1.25},
+                "5,1\nl78",
+                {"w": 1.25},
+                "5,2\nl79",
+                {"c": "#cccccc", "w": 6.25},
+                "5,6\nl80",
+                {"c": "#aaaaaa", "w": 1.25},
+                "5,10\nl81",
+                {"w": 1.25},
+                "5,12\nl82",
+                {"w": 1.25},
+                "5,11\nl83",
+                {"w": 1.25},
+                "5,13\nl84",
+                {"x": 0.25, "c": "#cccccc"},
+                "5,14\nl85",
+                "5,15\nl86",
+                "5,16\nl87"
+            ]
+        ]
+    }
+}
